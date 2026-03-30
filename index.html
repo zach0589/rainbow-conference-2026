@@ -22,6 +22,7 @@
     /* Logo bar */
     .logo-bar { position:absolute; bottom:14px; left:35px; right:35px; display:flex; justify-content:space-between; align-items:center; pointer-events:none; z-index:10; }
     .logo-bar img { height:32px; opacity:0.85; }
+    .logo-bar img[alt="Rainbow Restoration"] { height:48px; }
     .title-slide .logo-bar img.logo-dark,
     .section-divider .logo-bar img.logo-dark { display:none; }
     .title-slide .logo-bar img.logo-light,
@@ -98,7 +99,7 @@
     .funnel-stage h4 { color:var(--rbw-navy); margin:0 0 2px; font-size:0.82em; }
     .funnel-stage p { color:var(--rbw-gray); margin:0; font-size:0.68em; }
 
-    /* Funnel mapped */
+    /* Funnel mapped (legacy) */
     .funnel-mapped { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
     .funnel-mapped .fm-stage { padding:10px 14px; border-radius:6px; font-size:0.67em; }
     .funnel-mapped .fm-stage h4 { margin:0 0 4px; font-size:0.95em; }
@@ -112,6 +113,28 @@
     .fm-decision h4 { color:var(--rbw-navy); }
     .fm-conversion { background:rgba(88,89,91,0.05); border-left:4px solid var(--rbw-gray); }
     .fm-conversion h4 { color:var(--rbw-gray); }
+
+    /* Real funnel graphic */
+    .funnel-wrapper { display:flex; gap:24px; align-items:flex-start; }
+    .funnel-graphic { flex:0 0 340px; position:relative; }
+    .funnel-tier { margin:0 auto; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; font-weight:700; font-size:0.72em; letter-spacing:0.02em; position:relative; }
+    .funnel-tier span { position:relative; z-index:2; }
+    .ft-awareness { width:100%; height:56px; background:var(--rbw-red); clip-path:polygon(0% 0%, 100% 0%, 92% 100%, 8% 100%); }
+    .ft-consideration { width:84%; height:56px; background:#B5283A; clip-path:polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%); margin-top:-2px; }
+    .ft-decision { width:68%; height:56px; background:var(--rbw-navy); clip-path:polygon(0% 0%, 100% 0%, 88% 100%, 12% 100%); margin-top:-2px; }
+    .ft-conversion { width:52%; height:56px; background:var(--rbw-gray); clip-path:polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%); margin-top:-2px; border-radius:0 0 4px 4px; }
+    .funnel-channels { flex:1; display:flex; flex-direction:column; gap:4px; }
+    .fc-row { display:flex; align-items:center; gap:10px; padding:8px 12px; border-radius:6px; font-size:0.62em; min-height:56px; box-sizing:border-box; }
+    .fc-row h4 { margin:0 0 2px; font-size:1.1em; font-weight:700; }
+    .fc-row .fc-items { color:var(--rbw-gray); line-height:1.4; }
+    .fc-awareness { background:rgba(200,16,46,0.06); border-left:3px solid var(--rbw-red); }
+    .fc-awareness h4 { color:var(--rbw-red); }
+    .fc-consideration { background:rgba(200,16,46,0.03); border-left:3px solid #E8758A; }
+    .fc-consideration h4 { color:#B5283A; }
+    .fc-decision { background:rgba(27,48,87,0.06); border-left:3px solid var(--rbw-navy); }
+    .fc-decision h4 { color:var(--rbw-navy); }
+    .fc-conversion { background:rgba(88,89,91,0.06); border-left:3px solid var(--rbw-gray); }
+    .fc-conversion h4 { color:var(--rbw-gray); }
 
     /* Statement */
     .reveal .slides section.statement { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
@@ -194,42 +217,26 @@
       <!-- 3: THE MARKETING FUNNEL -->
       <section>
         <h2>The Marketing Funnel</h2>
-        <div class="funnel-mapped">
-          <div class="fm-stage fm-awareness">
-            <h4>Awareness</h4>
-            <ul>
-              <li>Social media</li>
-              <li>Community sponsorships</li>
-              <li>YouTube brand ads</li>
-              <li>Vehicle wraps / yard signs</li>
-            </ul>
+        <div class="funnel-wrapper">
+          <div class="funnel-graphic">
+            <div class="funnel-tier ft-awareness"><span>AWARENESS</span></div>
+            <div class="funnel-tier ft-consideration"><span>CONSIDERATION</span></div>
+            <div class="funnel-tier ft-decision"><span>DECISION</span></div>
+            <div class="funnel-tier ft-conversion"><span>CONVERSION</span></div>
           </div>
-          <div class="fm-stage fm-consideration">
-            <h4>Consideration</h4>
-            <ul>
-              <li>Retargeting ads</li>
-              <li>Blog content / SEO</li>
-              <li>YouTube how-to content</li>
-              <li>Email nurture</li>
-            </ul>
-          </div>
-          <div class="fm-stage fm-decision">
-            <h4>Decision</h4>
-            <ul>
-              <li>Local Service Ads</li>
-              <li>Google Ads (PPC)</li>
-              <li>SEO (high-intent keywords)</li>
-              <li>Google Business Profile</li>
-            </ul>
-          </div>
-          <div class="fm-stage fm-conversion">
-            <h4>Conversion</h4>
-            <ul>
-              <li>Website experience</li>
-              <li>Online reviews</li>
-              <li>Call answering / speed to lead</li>
-              <li>Follow-up systems / CRM</li>
-            </ul>
+          <div class="funnel-channels">
+            <div class="fc-row fc-awareness">
+              <div><h4>Awareness</h4><div class="fc-items">Social media, community sponsorships, YouTube brand ads, vehicle wraps</div></div>
+            </div>
+            <div class="fc-row fc-consideration">
+              <div><h4>Consideration</h4><div class="fc-items">Retargeting ads, blog content / SEO, YouTube how-to, email nurture</div></div>
+            </div>
+            <div class="fc-row fc-decision">
+              <div><h4>Decision</h4><div class="fc-items">Local Service Ads, Google Ads (PPC), SEO (high-intent), Google Business Profile</div></div>
+            </div>
+            <div class="fc-row fc-conversion">
+              <div><h4>Conversion</h4><div class="fc-items">Website experience, online reviews, speed to lead, follow-up / CRM</div></div>
+            </div>
           </div>
         </div>
         <div class="callout red"><strong>Restoration is emergency-driven.</strong> The decision stage lasts 5 minutes. Trust has to be built BEFORE the emergency.</div>
