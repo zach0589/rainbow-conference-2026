@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 2026 Restoration Marketing Reality | Rainbow Restoration</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+  <style>
+    :root {
+      --rbw-navy: #1B3057;
+      --rbw-red: #C8102E;
+      --rbw-gray: #58595B;
+      --rbw-light-gray: #F2F2F2;
+      --rbw-white: #FFFFFF;
+    }
+
+    .reveal {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      color: var(--rbw-navy);
+    }
+
+    .reveal .slides section {
+      text-align: left;
+      padding: 40px 60px;
+    }
+
+    /* Title slide */
+    .reveal .slides section.title-slide {
+      text-align: center;
+      background: var(--rbw-navy);
+      color: var(--rbw-white);
+    }
+    .reveal .slides section.title-slide h1 {
+      color: var(--rbw-white);
+      font-size: 2.2em;
+      margin-bottom: 0.1em;
+    }
+    .reveal .slides section.title-slide h2 {
+      color: var(--rbw-red);
+      font-size: 1.3em;
+      font-weight: 400;
+    }
+    .reveal .slides section.title-slide p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.8em;
+      margin-top: 1.5em;
+    }
+
+    /* Section divider slides */
+    .reveal .slides section.section-divider {
+      text-align: center;
+      background: var(--rbw-red);
+      color: var(--rbw-white);
+    }
+    .reveal .slides section.section-divider h2 {
+      color: var(--rbw-white);
+      font-size: 2.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slides section.section-divider h3 {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.2em;
+      font-weight: 400;
+    }
+
+    /* Default content slides */
+    .reveal h2 {
+      color: var(--rbw-navy);
+      font-size: 1.6em;
+      border-bottom: 3px solid var(--rbw-red);
+      padding-bottom: 0.3em;
+      margin-bottom: 0.8em;
+    }
+
+    .reveal ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .reveal ul li {
+      position: relative;
+      padding-left: 1.4em;
+      margin-bottom: 0.5em;
+      font-size: 0.85em;
+      line-height: 1.5;
+      color: var(--rbw-gray);
+    }
+    .reveal ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 8px;
+      height: 8px;
+      background: var(--rbw-red);
+      border-radius: 50%;
+    }
+    .reveal ul ul li {
+      font-size: 0.95em;
+      margin-bottom: 0.3em;
+    }
+    .reveal ul ul li::before {
+      width: 6px;
+      height: 6px;
+      background: var(--rbw-navy);
+      border-radius: 0;
+    }
+
+    /* Two-column layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .two-col .col h3 {
+      font-size: 0.95em;
+      color: var(--rbw-navy);
+      margin-bottom: 0.5em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .two-col .col.bad {
+      background: rgba(200, 16, 46, 0.05);
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid var(--rbw-red);
+    }
+    .two-col .col.good {
+      background: rgba(27, 48, 87, 0.05);
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid var(--rbw-navy);
+    }
+
+    /* Funnel visual */
+    .funnel-stage {
+      background: var(--rbw-light-gray);
+      border-left: 5px solid var(--rbw-red);
+      padding: 12px 20px;
+      margin-bottom: 12px;
+      border-radius: 0 6px 6px 0;
+    }
+    .funnel-stage h4 {
+      color: var(--rbw-navy);
+      margin: 0 0 4px 0;
+      font-size: 0.9em;
+    }
+    .funnel-stage p {
+      color: var(--rbw-gray);
+      margin: 0;
+      font-size: 0.75em;
+    }
+
+    /* Three-layer cards */
+    .layers {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+    .layer-card {
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 0.75em;
+    }
+    .layer-card h3 {
+      font-size: 1.1em;
+      margin-bottom: 0.5em;
+    }
+    .layer-card.capture {
+      background: rgba(27, 48, 87, 0.08);
+      border-top: 4px solid var(--rbw-navy);
+    }
+    .layer-card.capture h3 { color: var(--rbw-navy); }
+    .layer-card.create {
+      background: rgba(200, 16, 46, 0.06);
+      border-top: 4px solid var(--rbw-red);
+    }
+    .layer-card.create h3 { color: var(--rbw-red); }
+    .layer-card.convert {
+      background: rgba(88, 89, 91, 0.08);
+      border-top: 4px solid var(--rbw-gray);
+    }
+    .layer-card.convert h3 { color: var(--rbw-gray); }
+
+    /* Statement slide */
+    .reveal .slides section.statement {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 60px;
+    }
+    .reveal .slides section.statement h2 {
+      border: none;
+      font-size: 2em;
+      color: var(--rbw-navy);
+    }
+    .reveal .slides section.statement p {
+      font-size: 1.1em;
+      color: var(--rbw-gray);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Funnel mapped channels */
+    .funnel-mapped {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .funnel-mapped .fm-stage {
+      padding: 15px;
+      border-radius: 6px;
+      font-size: 0.72em;
+    }
+    .funnel-mapped .fm-stage h4 {
+      margin: 0 0 6px 0;
+      font-size: 1.05em;
+    }
+    .funnel-mapped .fm-stage ul {
+      margin: 0;
+    }
+    .funnel-mapped .fm-stage li {
+      margin-bottom: 0.2em;
+      font-size: 0.95em;
+    }
+    .fm-awareness { background: rgba(200, 16, 46, 0.06); border-left: 4px solid var(--rbw-red); }
+    .fm-awareness h4 { color: var(--rbw-red); }
+    .fm-consideration { background: rgba(200, 16, 46, 0.04); border-left: 4px solid #E8758A; }
+    .fm-consideration h4 { color: #B5283A; }
+    .fm-decision { background: rgba(27, 48, 87, 0.06); border-left: 4px solid var(--rbw-navy); }
+    .fm-decision h4 { color: var(--rbw-navy); }
+    .fm-conversion { background: rgba(88, 89, 91, 0.06); border-left: 4px solid var(--rbw-gray); }
+    .fm-conversion h4 { color: var(--rbw-gray); }
+
+    /* Highlight / emphasis */
+    .highlight {
+      color: var(--rbw-red);
+      font-weight: 700;
+    }
+
+    /* Activity slide */
+    .reveal .slides section.activity {
+      border: 3px solid var(--rbw-red);
+      border-radius: 12px;
+    }
+    .reveal .slides section.activity h2 {
+      color: var(--rbw-red);
+    }
+
+    /* Slide number */
+    .reveal .slide-number {
+      color: var(--rbw-gray);
+      font-size: 14px;
+    }
+
+    /* Speaker notes indicator */
+    .reveal .speaker-notes-indicator {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- SLIDE 1: Title -->
+      <section class="title-slide">
+        <h1>The 2026 Restoration<br>Marketing Reality</h1>
+        <h2>Winning with the Right Media Mix</h2>
+        <p>Spot On Solutions &bull; Rainbow Restoration National Conference 2026</p>
+      </section>
+
+      <!-- SLIDE 2: What Changed -->
+      <section>
+        <h2>What Changed in the Last 18 Months</h2>
+        <ul>
+          <li>Ad costs are up 20–35% across Google platforms</li>
+          <li>Google's search results page looks nothing like it did in 2024</li>
+          <li>More competitors are spending more money</li>
+          <li>AI is changing how people search and how Google serves results</li>
+          <li>The channels you relied on are getting crowded</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 3: Current Landscape -->
+      <section>
+        <h2>The Current Landscape</h2>
+        <div class="two-col">
+          <div class="col bad">
+            <h3>What's Happening</h3>
+            <ul>
+              <li>LSAs now dominate the top of search results</li>
+              <li>PPC costs have increased significantly in restoration</li>
+              <li>SEO still works but takes longer and faces more competition</li>
+              <li>Aggregators (Angi, Thumbtack) are bidding on your keywords</li>
+              <li>Google Business Profile is more important than ever</li>
+            </ul>
+          </div>
+          <div class="col good">
+            <h3>What This Means for You</h3>
+            <ul>
+              <li>No single channel is as reliable as it used to be</li>
+              <li>The cost of doing nothing goes up every quarter</li>
+              <li>Operators who diversify are winning</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: Biggest Shift -->
+      <section class="statement">
+        <h2>Stop thinking about channels.<br>Start thinking about systems.</h2>
+        <p>A channel is a tactic. A system is a strategy.<br>Your marketing should work together, not in silos.</p>
+      </section>
+
+      <!-- SLIDE 5: Channel vs System Thinking -->
+      <section>
+        <h2>Channel Thinking vs. System Thinking</h2>
+        <div class="two-col">
+          <div class="col bad">
+            <h3>Channel Thinking</h3>
+            <ul>
+              <li>"We need to be on LSA"</li>
+              <li>"Let's try running some Facebook ads"</li>
+              <li>"Our SEO guy handles that"</li>
+              <li>"We get leads, so it must be working"</li>
+              <li>Each channel operates independently</li>
+            </ul>
+          </div>
+          <div class="col good">
+            <h3>System Thinking</h3>
+            <ul>
+              <li>"Where does LSA fit in our overall strategy?"</li>
+              <li>"What happens after someone sees our ad?"</li>
+              <li>"How do all our channels support each other?"</li>
+              <li>"We track from first touch to closed job"</li>
+              <li>Every channel has a role in the full journey</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: What Is a Media Mix -->
+      <section>
+        <h2>What Is a Media Mix?</h2>
+        <ul>
+          <li>Your media mix is the combination of marketing channels you invest in</li>
+          <li>It defines where you show up, how you show up, and how often</li>
+          <li>A strong media mix balances three things:
+            <ul>
+              <li>Capturing demand that already exists</li>
+              <li>Creating demand before emergencies happen</li>
+              <li>Converting attention into booked jobs</li>
+            </ul>
+          </li>
+          <li>No two markets require the exact same mix</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 7: Three Layers -->
+      <section>
+        <h2>The Three Layers of a Strong Media Mix</h2>
+        <div class="layers">
+          <div class="layer-card capture">
+            <h3>1. Demand Capture</h3>
+            <p><em>Bottom of Funnel</em></p>
+            <ul>
+              <li>Local Service Ads</li>
+              <li>Google Ads (PPC) on high-intent keywords</li>
+              <li>SEO for "near me" and emergency searches</li>
+              <li>Google Business Profile optimization</li>
+            </ul>
+          </div>
+          <div class="layer-card create">
+            <h3>2. Demand Creation</h3>
+            <p><em>Middle / Top of Funnel</em></p>
+            <ul>
+              <li>Retargeting ads (display and social)</li>
+              <li>YouTube pre-roll ads</li>
+              <li>Social media content and paid social</li>
+              <li>Community involvement and branding</li>
+            </ul>
+          </div>
+          <div class="layer-card convert">
+            <h3>3. Trust &amp; Conversion</h3>
+            <p><em>The Revenue Layer</em></p>
+            <ul>
+              <li>Review generation and management</li>
+              <li>Website speed and user experience</li>
+              <li>Speed to lead (call answering, response time)</li>
+              <li>Follow-up systems and CRM</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: Conversion Layer -->
+      <section>
+        <h2>The Conversion Layer: Where Revenue Is Won or Lost</h2>
+        <ul>
+          <li><span class="highlight">Leads do not equal revenue</span></li>
+          <li>What happens between the click and the booked job matters more than the click itself</li>
+          <li>The conversion layer includes:
+            <ul>
+              <li>How fast you answer the phone</li>
+              <li>What your website looks like on mobile</li>
+              <li>Whether your reviews build trust or raise questions</li>
+              <li>How quickly you follow up on form submissions</li>
+            </ul>
+          </li>
+          <li><span class="highlight">Most companies lose 30–50% of their leads in this layer</span></li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 9: Common Mistakes -->
+      <section>
+        <h2>The Most Common Mistakes We See</h2>
+        <ul>
+          <li>Over-relying on LSA as the only lead source</li>
+          <li>No retargeting — letting website visitors leave and forget you</li>
+          <li>A website that looks outdated or loads slowly on mobile</li>
+          <li>Not answering calls within 3 rings or returning missed calls within 15 minutes</li>
+          <li>No system for tracking which channels actually produce revenue</li>
+          <li>Spending money without knowing your cost per booked job</li>
+          <li>Ignoring reviews or not actively generating them</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 10: Best Operators -->
+      <section>
+        <h2>What the Best Operators Do Differently</h2>
+        <ul>
+          <li>They invest across all three layers, not just demand capture</li>
+          <li>They track performance from first click to completed job</li>
+          <li>They treat their website and reviews as marketing assets, not afterthoughts</li>
+          <li>They answer the phone fast and follow up faster</li>
+          <li>They adjust their mix quarterly based on data, not gut feel</li>
+          <li>They think long-term (SEO, brand) while executing short-term (LSA, PPC)</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 11: Transition -->
+      <section>
+        <h2>Now It's Your Turn</h2>
+        <ul>
+          <li>You know what the landscape looks like</li>
+          <li>You know the three layers of a strong media mix</li>
+          <li>You know where most companies lose money</li>
+          <li><strong>Next: we're going to map YOUR marketing funnel</strong></li>
+          <li>You'll identify what you have, what's missing, and what to fix first</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 12: Workshop Divider -->
+      <section class="section-divider">
+        <h2>WORKSHOP</h2>
+        <h3>Build Your Marketing Funnel</h3>
+      </section>
+
+      <!-- SLIDE 13: Workshop Goal -->
+      <section>
+        <h2>Workshop Goal</h2>
+        <ul>
+          <li>We are <strong>NOT</strong> teaching marketing theory</li>
+          <li>We <strong>ARE</strong> mapping YOUR specific marketing right now</li>
+          <li>By the end of this workshop, you will:
+            <ul>
+              <li>See your full marketing funnel on paper</li>
+              <li>Identify the gaps in your current approach</li>
+              <li>Walk away with 2–3 clear next actions</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 14: The Marketing Funnel -->
+      <section>
+        <h2>The Marketing Funnel (Simplified)</h2>
+        <div class="funnel-stage">
+          <h4>1. Awareness</h4>
+          <p>People learn you exist. They see your brand before they need you.</p>
+        </div>
+        <div class="funnel-stage">
+          <h4>2. Consideration</h4>
+          <p>They have a problem and are comparing options. Reading reviews, checking websites, asking around.</p>
+        </div>
+        <div class="funnel-stage">
+          <h4>3. Decision</h4>
+          <p>They're ready to call someone. Searching "water damage restoration near me" right now.</p>
+        </div>
+        <div class="funnel-stage">
+          <h4>4. Conversion</h4>
+          <p>They clicked, called, or submitted a form. Now they need to become a booked, completed job.</p>
+        </div>
+      </section>
+
+      <!-- SLIDE 15: Why This Matters for Restoration -->
+      <section>
+        <h2>Why This Matters for Restoration</h2>
+        <ul>
+          <li>Restoration is emergency-driven: the decision stage is <span class="highlight">compressed</span></li>
+          <li>When someone needs you, they need you <strong>NOW</strong></li>
+          <li>That means:
+            <ul>
+              <li>Trust must be built before the emergency</li>
+              <li>Speed is a competitive advantage at every stage</li>
+              <li>The company that shows up first (online and in person) usually wins</li>
+            </ul>
+          </li>
+          <li>Your funnel has to account for both planned and panic decisions</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 16: Where Each Channel Fits -->
+      <section>
+        <h2>Where Each Channel Fits in the Funnel</h2>
+        <div class="funnel-mapped">
+          <div class="fm-stage fm-awareness">
+            <h4>Awareness</h4>
+            <ul>
+              <li>Social media (organic and paid)</li>
+              <li>Community sponsorships and events</li>
+              <li>YouTube brand ads</li>
+              <li>Vehicle wraps and yard signs</li>
+            </ul>
+          </div>
+          <div class="fm-stage fm-consideration">
+            <h4>Consideration</h4>
+            <ul>
+              <li>Retargeting ads</li>
+              <li>Blog content and educational resources</li>
+              <li>YouTube how-to and explainer content</li>
+              <li>Email nurture campaigns</li>
+            </ul>
+          </div>
+          <div class="fm-stage fm-decision">
+            <h4>Decision</h4>
+            <ul>
+              <li>Local Service Ads</li>
+              <li>Google Ads (PPC)</li>
+              <li>SEO (high-intent keywords)</li>
+              <li>Google Business Profile</li>
+            </ul>
+          </div>
+          <div class="fm-stage fm-conversion">
+            <h4>Conversion</h4>
+            <ul>
+              <li>Website experience (speed, mobile, clarity)</li>
+              <li>Online reviews and reputation</li>
+              <li>Call answering and speed to lead</li>
+              <li>Follow-up systems and CRM</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 17: Funnel Doesn't End at Click -->
+      <section>
+        <h2>The Funnel Does Not End at the Click</h2>
+        <ul>
+          <li>Getting the lead is only half the job</li>
+          <li><span class="highlight">The conversion layer is where revenue lives</span></li>
+          <li>Three questions to ask yourself:
+            <ul>
+              <li>What percentage of our leads become booked jobs?</li>
+              <li>How fast do we answer calls and return missed ones?</li>
+              <li>Would I hire us based on our website and reviews?</li>
+            </ul>
+          </li>
+          <li>If you can't answer these, <strong>that's your first gap</strong></li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 18: Step 1 — Map What You're Doing -->
+      <section class="activity">
+        <h2>Step 1: Map What You're Doing</h2>
+        <ul>
+          <li>Write down every marketing activity you're currently doing</li>
+          <li>For each one, answer two questions:
+            <ul>
+              <li><strong>WHY</strong> are you doing this? (What's the goal?)</li>
+              <li><strong>WHERE</strong> does it fit in the funnel? (Awareness, Consideration, Decision, or Conversion)</li>
+            </ul>
+          </li>
+          <li>Don't overthink it. Just get it all on paper.</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 19: Step 2 — Find the Gaps -->
+      <section class="activity">
+        <h2>Step 2: Find the Gaps</h2>
+        <ul>
+          <li>Look at your funnel map</li>
+          <li>Which stages have the most activity? Which have none?</li>
+          <li>Common patterns we see:
+            <ul>
+              <li>Heavy on Decision (LSA, PPC) — light on everything else</li>
+              <li>No Awareness activity at all</li>
+              <li>Nothing in Conversion beyond "we answer the phone"</li>
+            </ul>
+          </li>
+          <li><span class="highlight">Circle the biggest gap — that's your #1 priority</span></li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      showNotes: false,
+      plugins: [RevealNotes],
+      width: 1280,
+      height: 720,
+      margin: 0.04,
+      transition: 'slide',
+      transitionSpeed: 'default'
+    });
+  </script>
+</body>
+</html>
