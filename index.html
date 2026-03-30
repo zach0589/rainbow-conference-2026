@@ -17,12 +17,12 @@
     html, body { margin:0; padding:0; width:100%; height:100%; overflow:hidden; }
     .reveal { font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif; color:var(--rbw-navy); }
     .reveal .slides { text-align:left; }
-    .reveal .slides section { text-align:left; padding:50px 65px 65px; box-sizing:border-box; height:100%; }
+    .reveal .slides section { text-align:left; padding:40px 60px 55px; box-sizing:border-box; height:100%; }
 
     /* Logo bar */
-    .logo-bar { position:absolute; bottom:14px; left:35px; right:35px; display:flex; justify-content:space-between; align-items:center; pointer-events:none; z-index:10; }
-    .logo-bar img { height:32px; opacity:0.85; }
-    .logo-bar img[alt="Rainbow Restoration"] { height:48px; }
+    .logo-bar { position:absolute; bottom:12px; left:30px; right:30px; display:flex; justify-content:space-between; align-items:center; pointer-events:none; z-index:10; }
+    .logo-bar img { height:30px; opacity:0.8; }
+    .logo-bar img[alt="Rainbow Restoration"] { height:44px; }
     .title-slide .logo-bar img.logo-dark,
     .section-divider .logo-bar img.logo-dark { display:none; }
     .title-slide .logo-bar img.logo-light,
@@ -32,61 +32,58 @@
 
     /* Title slide */
     .reveal .slides section.title-slide { text-align:center; background:var(--rbw-navy); color:var(--rbw-white); display:flex; flex-direction:column; justify-content:center; align-items:center; }
-    .reveal .slides section.title-slide h1 { color:var(--rbw-white); font-size:2.2em; margin-bottom:0.1em; line-height:1.15; }
-    .reveal .slides section.title-slide h2 { color:var(--rbw-red); font-size:1.2em; font-weight:400; }
-    .reveal .slides section.title-slide p { color:rgba(255,255,255,0.6); font-size:0.7em; margin-top:1.5em; }
+    .reveal .slides section.title-slide h1 { color:var(--rbw-white); font-size:2.4em; margin-bottom:0.15em; line-height:1.15; }
+    .reveal .slides section.title-slide h2 { color:var(--rbw-red); font-size:1.2em; font-weight:400; margin:0; }
+    .reveal .slides section.title-slide p { color:rgba(255,255,255,0.5); font-size:0.7em; margin-top:2em; }
 
     /* Section divider */
     .reveal .slides section.section-divider { text-align:center; background:var(--rbw-red); color:var(--rbw-white); display:flex; flex-direction:column; justify-content:center; align-items:center; }
-    .reveal .slides section.section-divider h2 { color:var(--rbw-white); font-size:2.4em; margin-bottom:0.2em; border:none; }
+    .reveal .slides section.section-divider h2 { color:var(--rbw-white); font-size:2.6em; margin-bottom:0.15em; border:none; }
     .reveal .slides section.section-divider h3 { color:rgba(255,255,255,0.85); font-size:1.1em; font-weight:400; }
 
     /* Headings */
-    .reveal h2 { color:var(--rbw-navy); font-size:1.4em; border-bottom:3px solid var(--rbw-red); padding-bottom:0.2em; margin-bottom:0.6em; margin-top:0; }
+    .reveal h2 { color:var(--rbw-navy); font-size:1.35em; border-bottom:3px solid var(--rbw-red); padding-bottom:0.2em; margin-bottom:0.5em; margin-top:0; }
 
     /* Bullets */
     .reveal ul { list-style:none; padding-left:0; margin:0; }
-    .reveal ul li { position:relative; padding-left:1.2em; margin-bottom:0.4em; font-size:0.78em; line-height:1.4; color:var(--rbw-gray); }
+    .reveal ul li { position:relative; padding-left:1.2em; margin-bottom:0.35em; font-size:0.78em; line-height:1.4; color:var(--rbw-gray); }
     .reveal ul li::before { content:''; position:absolute; left:0; top:0.45em; width:7px; height:7px; background:var(--rbw-red); border-radius:50%; }
-    .reveal ul ul { margin-top:0.25em; }
-    .reveal ul ul li { font-size:0.93em; margin-bottom:0.2em; }
+    .reveal ul ul { margin-top:0.2em; }
+    .reveal ul ul li { font-size:0.93em; margin-bottom:0.15em; }
     .reveal ul ul li::before { width:5px; height:5px; background:var(--rbw-navy); border-radius:0; }
 
     /* Data tables */
-    .data-table { width:100%; border-collapse:collapse; font-size:0.7em; margin:0.4em 0; }
-    .data-table th { background:var(--rbw-navy); color:#fff; padding:6px 10px; text-align:left; font-size:0.85em; text-transform:uppercase; letter-spacing:0.04em; }
-    .data-table td { padding:5px 10px; border-bottom:1px solid #e0e0e0; color:var(--rbw-gray); }
+    .data-table { width:100%; border-collapse:collapse; font-size:0.72em; margin:0.3em 0; }
+    .data-table th { background:var(--rbw-navy); color:#fff; padding:5px 10px; text-align:left; font-size:0.82em; text-transform:uppercase; letter-spacing:0.04em; }
+    .data-table td { padding:4px 10px; border-bottom:1px solid #e0e0e0; color:var(--rbw-gray); }
     .data-table tr:nth-child(even) { background:rgba(27,48,87,0.03); }
     .data-table .num { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; }
     .data-table .up { color:#43a047; }
     .data-table .down { color:var(--rbw-red); }
-    .data-table .neutral { color:var(--rbw-gray); }
 
     /* Stat cards */
-    .stat-row { display:flex; gap:16px; margin:0.5em 0; }
-    .stat-card { flex:1; background:var(--rbw-light-gray); border-top:4px solid var(--rbw-red); border-radius:0 0 8px 8px; padding:14px 16px; text-align:center; }
+    .stat-row { display:flex; gap:14px; margin:0.4em 0; }
+    .stat-card { flex:1; background:var(--rbw-light-gray); border-top:4px solid var(--rbw-red); border-radius:0 0 8px 8px; padding:12px 14px; text-align:center; }
     .stat-card.navy { border-top-color:var(--rbw-navy); }
     .stat-card.gray { border-top-color:var(--rbw-gray); }
-    .stat-card .stat-num { font-size:1.6em; font-weight:800; color:var(--rbw-navy); line-height:1.1; }
-    .stat-card .stat-label { font-size:0.65em; color:var(--rbw-gray); margin-top:4px; line-height:1.3; }
+    .stat-card .stat-num { font-size:1.7em; font-weight:800; color:var(--rbw-navy); line-height:1; }
+    .stat-card .stat-label { font-size:0.6em; color:var(--rbw-gray); margin-top:4px; line-height:1.25; }
 
     /* Callout box */
-    .callout { background:rgba(27,48,87,0.06); border-left:4px solid var(--rbw-navy); padding:10px 14px; border-radius:0 6px 6px 0; margin:0.5em 0; font-size:0.72em; color:var(--rbw-gray); line-height:1.5; }
+    .callout { background:rgba(27,48,87,0.05); border-left:4px solid var(--rbw-navy); padding:8px 14px; border-radius:0 6px 6px 0; margin:0.4em 0 0; font-size:0.7em; color:var(--rbw-gray); line-height:1.45; }
     .callout strong { color:var(--rbw-navy); }
     .callout.red { border-left-color:var(--rbw-red); background:rgba(200,16,46,0.04); }
     .callout.red strong { color:var(--rbw-red); }
 
     /* Two-column */
-    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
-    .two-col .col h3 { font-size:0.82em; color:var(--rbw-navy); margin-bottom:0.35em; margin-top:0; text-transform:uppercase; letter-spacing:0.04em; }
-    .two-col .col.bad { background:rgba(200,16,46,0.04); padding:16px; border-radius:8px; border-left:4px solid var(--rbw-red); }
-    .two-col .col.good { background:rgba(27,48,87,0.04); padding:16px; border-radius:8px; border-left:4px solid var(--rbw-navy); }
+    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .two-col h3 { font-size:0.75em; color:var(--rbw-navy); margin:0 0 0.3em; text-transform:uppercase; letter-spacing:0.04em; }
 
     /* Three-layer cards */
-    .layers { display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; }
-    .layer-card { padding:14px; border-radius:8px; font-size:0.68em; }
-    .layer-card h3 { font-size:1em; margin:0 0 0.25em; }
-    .layer-card p { margin:0 0 0.3em; }
+    .layers { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+    .layer-card { padding:12px 14px; border-radius:8px; font-size:0.68em; }
+    .layer-card h3 { font-size:0.95em; margin:0 0 0.2em; }
+    .layer-card p { margin:0 0 0.25em; font-style:italic; font-size:0.9em; }
     .layer-card.capture { background:rgba(27,48,87,0.07); border-top:4px solid var(--rbw-navy); }
     .layer-card.capture h3 { color:var(--rbw-navy); }
     .layer-card.create { background:rgba(200,16,46,0.05); border-top:4px solid var(--rbw-red); }
@@ -94,59 +91,32 @@
     .layer-card.convert { background:rgba(88,89,91,0.07); border-top:4px solid var(--rbw-gray); }
     .layer-card.convert h3 { color:var(--rbw-gray); }
 
-    /* Funnel stages */
-    .funnel-stage { background:var(--rbw-light-gray); border-left:5px solid var(--rbw-red); padding:9px 16px; margin-bottom:8px; border-radius:0 6px 6px 0; }
-    .funnel-stage h4 { color:var(--rbw-navy); margin:0 0 2px; font-size:0.82em; }
-    .funnel-stage p { color:var(--rbw-gray); margin:0; font-size:0.68em; }
-
-    /* Funnel mapped (legacy) */
-    .funnel-mapped { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-    .funnel-mapped .fm-stage { padding:10px 14px; border-radius:6px; font-size:0.67em; }
-    .funnel-mapped .fm-stage h4 { margin:0 0 4px; font-size:0.95em; }
-    .funnel-mapped .fm-stage ul { margin:0; }
-    .funnel-mapped .fm-stage li { margin-bottom:0.12em; font-size:0.93em; }
-    .fm-awareness { background:rgba(200,16,46,0.05); border-left:4px solid var(--rbw-red); }
-    .fm-awareness h4 { color:var(--rbw-red); }
-    .fm-consideration { background:rgba(200,16,46,0.03); border-left:4px solid #E8758A; }
-    .fm-consideration h4 { color:#B5283A; }
-    .fm-decision { background:rgba(27,48,87,0.05); border-left:4px solid var(--rbw-navy); }
-    .fm-decision h4 { color:var(--rbw-navy); }
-    .fm-conversion { background:rgba(88,89,91,0.05); border-left:4px solid var(--rbw-gray); }
-    .fm-conversion h4 { color:var(--rbw-gray); }
-
-    /* Real funnel graphic */
-    .funnel-wrapper { display:flex; gap:32px; align-items:stretch; }
-    .funnel-visual { flex:0 0 300px; display:flex; flex-direction:column; align-items:center; }
+    /* Funnel graphic */
+    .funnel-wrapper { display:flex; gap:28px; align-items:stretch; }
+    .funnel-visual { flex:0 0 280px; display:flex; flex-direction:column; align-items:center; }
     .funnel-visual svg { width:100%; height:auto; }
-    .funnel-labels { flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:4px 0; }
-    .fl-row { display:flex; align-items:center; gap:12px; flex:1; padding:0 0 0 8px; }
-    .fl-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+    .funnel-labels { flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:2px 0; }
+    .fl-row { display:flex; align-items:center; gap:10px; flex:1; }
+    .fl-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
     .fl-dot.red { background:var(--rbw-red); }
     .fl-dot.darkred { background:#9B1B30; }
     .fl-dot.navy { background:var(--rbw-navy); }
     .fl-dot.gray { background:var(--rbw-gray); }
-    .fl-text h4 { margin:0; font-size:0.78em; font-weight:700; }
-    .fl-text p { margin:2px 0 0; font-size:0.6em; color:var(--rbw-gray); line-height:1.35; }
+    .fl-text h4 { margin:0; font-size:0.75em; font-weight:700; }
+    .fl-text p { margin:1px 0 0; font-size:0.58em; color:var(--rbw-gray); line-height:1.3; }
     .fl-text.t-awareness h4 { color:var(--rbw-red); }
     .fl-text.t-consideration h4 { color:#9B1B30; }
     .fl-text.t-decision h4 { color:var(--rbw-navy); }
     .fl-text.t-conversion h4 { color:var(--rbw-gray); }
 
-    /* Statement */
-    .reveal .slides section.statement { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
-    .reveal .slides section.statement h2 { border:none; font-size:1.9em; color:var(--rbw-navy); }
-    .reveal .slides section.statement p { font-size:1em; color:var(--rbw-gray); max-width:700px; margin:0 auto; }
-
-    /* Activity */
-    .reveal .slides section.activity { border:3px solid var(--rbw-red); border-radius:12px; }
+    /* Activity slides */
+    .reveal .slides section.activity { border:3px solid var(--rbw-red); border-radius:12px; display:flex; flex-direction:column; justify-content:center; }
     .reveal .slides section.activity h2 { color:var(--rbw-red); }
 
     .highlight { color:var(--rbw-red); font-weight:700; }
-    .reveal .slide-number { color:var(--rbw-gray); font-size:12px; right:16px; bottom:16px; }
+    .reveal .slide-number { color:var(--rbw-gray); font-size:11px; right:14px; bottom:14px; }
     .reveal .speaker-notes-indicator { display:none; }
-
-    /* Source line */
-    .source { font-size:0.55em; color:#999; margin-top:0.5em; font-style:italic; }
+    .source { font-size:0.52em; color:#aaa; margin-top:0.3em; font-style:italic; }
   </style>
 </head>
 <body>
@@ -167,24 +137,21 @@
       <!-- 2: WHAT IS A MEDIA MIX -->
       <section>
         <h2>What Is a Media Mix?</h2>
-        <ul>
-          <li>Your media mix is the combination of marketing channels you invest in and how they work together</li>
-          <li>A strong media mix covers three layers:</li>
-        </ul>
-        <div class="layers" style="margin-top:0.4em;">
+        <p style="font-size:0.78em;color:var(--rbw-gray);margin:0 0 0.4em;">The combination of marketing channels you invest in — and how they work together.</p>
+        <div class="layers">
           <div class="layer-card capture">
-            <h3>Layer 1: Demand Capture</h3>
-            <p>Catching people actively searching</p>
+            <h3>Demand Capture</h3>
+            <p>Catch active searchers</p>
             <ul>
-              <li>LSA</li>
-              <li>PPC</li>
+              <li>Local Service Ads</li>
+              <li>Google Ads (PPC)</li>
               <li>SEO</li>
-              <li>GBP</li>
+              <li>Google Business Profile</li>
             </ul>
           </div>
           <div class="layer-card create">
-            <h3>Layer 2: Demand Creation</h3>
-            <p>Building awareness before the emergency</p>
+            <h3>Demand Creation</h3>
+            <p>Build awareness early</p>
             <ul>
               <li>Retargeting</li>
               <li>Social media</li>
@@ -193,17 +160,17 @@
             </ul>
           </div>
           <div class="layer-card convert">
-            <h3>Layer 3: Trust &amp; Conversion</h3>
-            <p>Turning leads into booked jobs</p>
+            <h3>Trust &amp; Conversion</h3>
+            <p>Turn leads into jobs</p>
             <ul>
               <li>Reviews</li>
-              <li>Website</li>
+              <li>Website experience</li>
               <li>Speed to lead</li>
-              <li>Follow-up</li>
+              <li>Follow-up / CRM</li>
             </ul>
           </div>
         </div>
-        <div class="callout">Most restoration companies invest heavily in Layer 1 and almost nothing in Layers 2 and 3.</div>
+        <div class="callout">Most restoration companies invest heavily in Capture and almost nothing in Creation or Conversion.</div>
         <div class="logo-bar">
           <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
           <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
@@ -216,49 +183,21 @@
         <div class="funnel-wrapper">
           <div class="funnel-visual">
             <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
-              <!-- Awareness -->
               <polygon points="10,0 290,0 256,60 44,60" fill="#C8102E" opacity="0.92"/>
               <text x="150" y="37" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Segoe UI,Helvetica,Arial,sans-serif" letter-spacing="1.5">AWARENESS</text>
-              <!-- Consideration -->
               <polygon points="44,64 256,64 224,124 76,124" fill="#9B1B30" opacity="0.88"/>
-              <text x="150" y="101" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Segoe UI,Helvetica,Arial,sans-serif" letter-spacing="1.5">CONSIDERATION</text>
-              <!-- Decision -->
+              <text x="150" y="101" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="Segoe UI,Helvetica,Arial,sans-serif" letter-spacing="1.2">CONSIDERATION</text>
               <polygon points="76,128 224,128 196,188 104,188" fill="#1B3057" opacity="0.92"/>
               <text x="150" y="165" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Segoe UI,Helvetica,Arial,sans-serif" letter-spacing="1.5">DECISION</text>
-              <!-- Conversion -->
               <polygon points="104,192 196,192 176,252 124,252" fill="#58595B" opacity="0.88"/>
               <text x="150" y="229" text-anchor="middle" fill="#fff" font-size="10" font-weight="700" font-family="Segoe UI,Helvetica,Arial,sans-serif" letter-spacing="0.5">CONVERSION</text>
             </svg>
           </div>
           <div class="funnel-labels">
-            <div class="fl-row">
-              <div class="fl-dot red"></div>
-              <div class="fl-text t-awareness">
-                <h4>Awareness</h4>
-                <p>Social media, community sponsorships, YouTube brand ads, vehicle wraps</p>
-              </div>
-            </div>
-            <div class="fl-row">
-              <div class="fl-dot darkred"></div>
-              <div class="fl-text t-consideration">
-                <h4>Consideration</h4>
-                <p>Retargeting ads, blog content / SEO, YouTube how-to, email nurture</p>
-              </div>
-            </div>
-            <div class="fl-row">
-              <div class="fl-dot navy"></div>
-              <div class="fl-text t-decision">
-                <h4>Decision</h4>
-                <p>Local Service Ads, Google Ads (PPC), SEO (high-intent), Google Business Profile</p>
-              </div>
-            </div>
-            <div class="fl-row">
-              <div class="fl-dot gray"></div>
-              <div class="fl-text t-conversion">
-                <h4>Conversion</h4>
-                <p>Website experience, online reviews, speed to lead, follow-up / CRM</p>
-              </div>
-            </div>
+            <div class="fl-row"><div class="fl-dot red"></div><div class="fl-text t-awareness"><h4>Awareness</h4><p>Social media, sponsorships, YouTube, vehicle wraps</p></div></div>
+            <div class="fl-row"><div class="fl-dot darkred"></div><div class="fl-text t-consideration"><h4>Consideration</h4><p>Retargeting, blog content, SEO, email nurture</p></div></div>
+            <div class="fl-row"><div class="fl-dot navy"></div><div class="fl-text t-decision"><h4>Decision</h4><p>LSA, Google Ads, SEO (high-intent), GBP</p></div></div>
+            <div class="fl-row"><div class="fl-dot gray"></div><div class="fl-text t-conversion"><h4>Conversion</h4><p>Website, reviews, speed to lead, follow-up</p></div></div>
           </div>
         </div>
         <div class="callout red"><strong>Restoration is emergency-driven.</strong> The consideration phase is far shorter than most industries. Trust has to be built BEFORE the emergency.</div>
@@ -274,20 +213,20 @@
         <div class="stat-row">
           <div class="stat-card">
             <div class="stat-num">90%</div>
-            <div class="stat-label">of U.S. adults engage with<br>AI-generated summaries when searching</div>
+            <div class="stat-label">of adults engage with AI<br>summaries when searching</div>
           </div>
           <div class="stat-card navy">
             <div class="stat-num">41%</div>
-            <div class="stat-label">of restoration customers used<br>ChatGPT or AI after seeing an ad<br><strong style="color:var(--rbw-red);">+116% vs avg</strong></div>
+            <div class="stat-label">used ChatGPT or AI<br>after seeing an ad<br><strong style="color:var(--rbw-red);font-size:1.1em;">+116% vs avg</strong></div>
           </div>
           <div class="stat-card">
             <div class="stat-num">29%</div>
-            <div class="stat-label">already have a company name<br>in mind when they search online</div>
+            <div class="stat-label">already have a company<br>name in mind when searching</div>
           </div>
         </div>
-        <ul style="margin-top:0.5em;">
+        <ul style="margin-top:0.4em;">
           <li>67% of homeowners took action after seeing a TV ad in the past year</li>
-          <li>58% were influenced by a blog post in the last 30 days <strong>(+114% vs average)</strong></li>
+          <li>58% were influenced by a blog post in the last 30 days <strong>(+114% vs avg)</strong></li>
           <li>Homeowners are 12% more likely to check a company's blog for expertise</li>
         </ul>
         <p class="source">Sources: AdMall/SalesFuel AudienceSCAN 2025; Centerfield Gen-AI Consumer Survey 2025</p>
@@ -303,15 +242,15 @@
         <div class="stat-row">
           <div class="stat-card">
             <div class="stat-num">$10.79M</div>
-            <div class="stat-label">Ad Spend Analyzed<br>Across Restoration</div>
+            <div class="stat-label">Ad Spend Analyzed</div>
           </div>
           <div class="stat-card navy">
             <div class="stat-num">+44.7%</div>
-            <div class="stat-label">Combined Google<br>Spend Growth YoY</div>
+            <div class="stat-label">Google Spend Growth YoY</div>
           </div>
           <div class="stat-card navy">
             <div class="stat-num">55,352</div>
-            <div class="stat-label">Restoration Establishments<br>Nationwide</div>
+            <div class="stat-label">Establishments Nationwide</div>
           </div>
         </div>
         <table class="data-table">
@@ -321,7 +260,7 @@
           <tr><td>LSA CPC</td><td class="num">$6.45</td><td class="num">$7.80</td><td class="num up">+20.9%</td></tr>
           <tr><td>Google Search CPC</td><td class="num">$5.43</td><td class="num">$4.86</td><td class="num down">-10.4%</td></tr>
         </table>
-        <div class="callout"><strong>LSA is the fastest-growing cost channel</strong> (+20.9% CPC increase). Google Search CPC actually decreased. The industry is getting more competitive &mdash; but smarter operators are getting more efficient.</div>
+        <div class="callout"><strong>LSA costs are rising fast</strong> (+20.9% CPC). Google Search CPC actually dropped. More competitive — but smarter operators are getting more efficient.</div>
         <p class="source">Source: SOS x C&amp;R Magazine Cleaning &amp; Restoration Digital Advertising Report 2026</p>
         <div class="logo-bar">
           <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
@@ -335,53 +274,53 @@
         <div class="stat-row">
           <div class="stat-card">
             <div class="stat-num">14.2%</div>
-            <div class="stat-label">AI Traffic<br>Conversion Rate</div>
+            <div class="stat-label">AI Traffic Conversion Rate</div>
           </div>
           <div class="stat-card navy">
             <div class="stat-num">2.8%</div>
-            <div class="stat-label">Google Traffic<br>Conversion Rate</div>
+            <div class="stat-label">Google Traffic Conversion Rate</div>
           </div>
           <div class="stat-card gray">
             <div class="stat-num">5x</div>
-            <div class="stat-label">AI Converts at 5x<br>the Rate of Google</div>
+            <div class="stat-label">AI Converts at 5x Google's Rate</div>
           </div>
         </div>
-        <div class="two-col" style="margin-top:0.4em;">
+        <div class="two-col" style="margin-top:0.35em;">
           <div>
-            <h3 style="font-size:0.78em;color:var(--rbw-navy);margin:0 0 0.3em;text-transform:uppercase;">The Reality Right Now</h3>
+            <h3>The Reality Right Now</h3>
             <ul>
               <li>Google still handles 90% of search traffic</li>
-              <li>But AI traffic converts at <strong>5x the rate</strong></li>
-              <li>41% of restoration customers already use AI tools to research companies</li>
-              <li>AI doesn't drive most traffic yet &mdash; but it drives the <em>highest-quality</em> traffic</li>
+              <li>AI traffic converts at <strong>5x the rate</strong></li>
+              <li>41% of restoration customers already use AI to research</li>
+              <li>Less volume, but <em>much higher quality</em> traffic</li>
             </ul>
           </div>
           <div>
-            <h3 style="font-size:0.78em;color:var(--rbw-navy);margin:0 0 0.3em;text-transform:uppercase;">The Good News</h3>
+            <h3>The Good News</h3>
             <ul>
               <li>Google and AI reward the <strong>same thing</strong></li>
               <li>Authoritative content on your website</li>
-              <li>Strong reviews and a well-managed GBP</li>
-              <li>A brand worth citing &mdash; the companies AI "knows" are the ones it recommends</li>
+              <li>Strong reviews and a managed GBP</li>
+              <li>A brand worth citing — AI recommends what it "knows"</li>
             </ul>
           </div>
         </div>
-        <div class="callout red"><strong>You don't need two strategies.</strong> Build authoritative content, earn strong reviews, and build a brand worth citing. Google and AI are just two different systems rewarding the same thing.</div>
+        <div class="callout red"><strong>You don't need two strategies.</strong> Authoritative content, strong reviews, a brand worth citing. Google and AI are two systems rewarding the same thing.</div>
         <div class="logo-bar">
           <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
           <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
         </div>
       </section>
 
-      <!-- 7: WHAT THIS MEANS FOR YOUR FUNNEL -->
+      <!-- 7: WHAT THIS MEANS -->
       <section>
-        <h2>What This All Means for Your Funnel</h2>
+        <h2>What This Means for Your Funnel</h2>
         <ul>
-          <li><span class="highlight">Decision stage is getting more expensive.</span> LSA costs up 20.9%. You can't just outspend your way to leads.</li>
-          <li><span class="highlight">Awareness drives the cheapest conversions.</span> 29% of homeowners already have a name in mind when they search. Brand building pays off at the bottom.</li>
-          <li><span class="highlight">Reviews are non-negotiable.</span> 31.5% say a business needs at least 15 recent reviews. 35% are positively influenced when you respond to negative reviews.</li>
-          <li><span class="highlight">AI is the new front door.</span> 41% of your potential customers are using AI tools to research you. Your content, reviews, and GBP feed what AI says about you.</li>
-          <li><span class="highlight">The operators who cover all four funnel stages are the ones growing.</span></li>
+          <li><span class="highlight">Decision is getting expensive.</span> LSA costs up 20.9%. You can't outspend your way to leads.</li>
+          <li><span class="highlight">Awareness drives the cheapest conversions.</span> 29% already have a name in mind when they search.</li>
+          <li><span class="highlight">Reviews are non-negotiable.</span> 31.5% need 15+ recent reviews to be influenced. 35% respond positively when you reply to negatives.</li>
+          <li><span class="highlight">AI is the new front door.</span> 41% use AI to research you. Your content, reviews, and GBP feed what AI recommends.</li>
+          <li><span class="highlight">Operators who cover all four funnel stages are the ones growing.</span></li>
         </ul>
         <div class="logo-bar">
           <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
@@ -399,16 +338,16 @@
         </div>
       </section>
 
-      <!-- 9: FUNNEL REFERENCE (for activity) -->
-      <section style="display:flex !important;flex-direction:column;align-items:center;justify-content:center;text-align:center !important;padding:20px;">
-        <h2 style="border:none;text-align:center;margin-bottom:0.3em;width:100%;">Where Does Your Marketing Fit?</h2>
-        <p style="font-size:0.75em;color:var(--rbw-gray);margin-bottom:0.5em;">Map each of your activities to one of these four stages.</p>
-        <div style="width:min(520px, 55vh);margin:0 auto;display:flex;justify-content:center;">
+      <!-- 9: FUNNEL REFERENCE -->
+      <section style="display:flex !important;flex-direction:column;align-items:center;justify-content:center;text-align:center !important;padding:30px;">
+        <h2 style="border:none;text-align:center;margin-bottom:0.2em;width:100%;">Where Does Your Marketing Fit?</h2>
+        <p style="font-size:0.72em;color:var(--rbw-gray);margin:0 0 0.3em;">Map each activity to one of these four stages.</p>
+        <div style="width:min(480px,52vh);margin:0 auto;display:flex;justify-content:center;">
           <svg viewBox="0 0 400 440" xmlns="http://www.w3.org/2000/svg" style="display:block;max-width:100%;height:auto;">
             <polygon points="10,0 390,0 340,105 60,105" fill="#C8102E" opacity="0.92"/>
             <text x="200" y="62" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="Segoe UI,Helvetica,Arial,sans-serif" letter-spacing="2">AWARENESS</text>
             <polygon points="60,110 340,110 296,215 104,215" fill="#9B1B30" opacity="0.88"/>
-            <text x="200" y="172" text-anchor="middle" fill="#fff" font-size="17" font-weight="700" font-family="Segoe UI,Helvetica,Arial,sans-serif" letter-spacing="2">CONSIDERATION</text>
+            <text x="200" y="172" text-anchor="middle" fill="#fff" font-size="16" font-weight="700" font-family="Segoe UI,Helvetica,Arial,sans-serif" letter-spacing="1.5">CONSIDERATION</text>
             <polygon points="104,220 296,220 258,325 142,325" fill="#1B3057" opacity="0.92"/>
             <text x="200" y="282" text-anchor="middle" fill="#fff" font-size="18" font-weight="700" font-family="Segoe UI,Helvetica,Arial,sans-serif" letter-spacing="2">DECISION</text>
             <polygon points="142,330 258,330 230,435 170,435" fill="#58595B" opacity="0.88"/>
@@ -428,8 +367,8 @@
           <li>Write down every marketing activity you're currently doing</li>
           <li>For each one, answer two questions:
             <ul>
-              <li><strong>WHY</strong> are you doing this? (What's the goal?)</li>
-              <li><strong>WHERE</strong> does it fit in the funnel? (Awareness, Consideration, Decision, or Conversion)</li>
+              <li><strong>WHY</strong> are you doing this? What's the goal?</li>
+              <li><strong>WHERE</strong> does it fit? (Awareness, Consideration, Decision, or Conversion)</li>
             </ul>
           </li>
           <li>Don't overthink it. Just get it all on paper.</li>
@@ -440,20 +379,19 @@
         </div>
       </section>
 
-      <!-- 10: STEP 2 -->
+      <!-- 11: STEP 2 -->
       <section class="activity">
         <h2>Step 2: Find the Gaps</h2>
         <ul>
-          <li>Look at your funnel map</li>
-          <li>Which stages have the most activity? Which have none?</li>
-          <li>Common patterns we see:
+          <li>Which funnel stages have the most activity? Which have none?</li>
+          <li>Common patterns:
             <ul>
-              <li>Heavy on Decision (LSA, PPC) &mdash; light on everything else</li>
+              <li>Heavy on Decision (LSA, PPC) — light on everything else</li>
               <li>No Awareness activity at all</li>
               <li>Nothing in Conversion beyond "we answer the phone"</li>
             </ul>
           </li>
-          <li><span class="highlight">Circle the biggest gap &mdash; that's your #1 priority</span></li>
+          <li><span class="highlight">Circle the biggest gap — that's your #1 priority</span></li>
         </ul>
         <div class="logo-bar">
           <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
