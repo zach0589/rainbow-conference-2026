@@ -14,326 +14,127 @@
       --rbw-light-gray: #F2F2F2;
       --rbw-white: #FFFFFF;
     }
+    html, body { margin:0; padding:0; width:100%; height:100%; overflow:hidden; }
+    .reveal { font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif; color:var(--rbw-navy); }
+    .reveal .slides { text-align:left; }
+    .reveal .slides section { text-align:left; padding:50px 65px 65px; box-sizing:border-box; height:100%; }
 
-    /* Make reveal fill the full viewport */
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-    .reveal {
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-      color: var(--rbw-navy);
-    }
-    .reveal .slides {
-      text-align: left;
-    }
-    .reveal .slides section {
-      text-align: left;
-      padding: 60px 70px 70px 70px;
-      box-sizing: border-box;
-      height: 100%;
-    }
-
-    /* ── Logo bar (bottom of every slide) ── */
-    .logo-bar {
-      position: absolute;
-      bottom: 18px;
-      left: 40px;
-      right: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      pointer-events: none;
-      z-index: 10;
-    }
-    .logo-bar img {
-      height: 36px;
-      opacity: 0.85;
-    }
-    /* White logos for dark-background slides */
+    /* Logo bar */
+    .logo-bar { position:absolute; bottom:14px; left:35px; right:35px; display:flex; justify-content:space-between; align-items:center; pointer-events:none; z-index:10; }
+    .logo-bar img { height:32px; opacity:0.85; }
     .title-slide .logo-bar img.logo-dark,
-    .section-divider .logo-bar img.logo-dark {
-      display: none;
-    }
+    .section-divider .logo-bar img.logo-dark { display:none; }
     .title-slide .logo-bar img.logo-light,
-    .section-divider .logo-bar img.logo-light {
-      display: inline;
-    }
-    /* Default: show dark logos, hide light */
-    .logo-bar img.logo-light {
-      display: none;
-    }
-    .logo-bar img.logo-dark {
-      display: inline;
-    }
+    .section-divider .logo-bar img.logo-light { display:inline; }
+    .logo-bar img.logo-light { display:none; }
+    .logo-bar img.logo-dark { display:inline; }
 
-    /* ── Title slide ── */
-    .reveal .slides section.title-slide {
-      text-align: center;
-      background: var(--rbw-navy);
-      color: var(--rbw-white);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .reveal .slides section.title-slide h1 {
-      color: var(--rbw-white);
-      font-size: 2.4em;
-      margin-bottom: 0.1em;
-      line-height: 1.15;
-    }
-    .reveal .slides section.title-slide h2 {
-      color: var(--rbw-red);
-      font-size: 1.3em;
-      font-weight: 400;
-    }
-    .reveal .slides section.title-slide p {
-      color: rgba(255,255,255,0.6);
-      font-size: 0.75em;
-      margin-top: 1.5em;
-    }
+    /* Title slide */
+    .reveal .slides section.title-slide { text-align:center; background:var(--rbw-navy); color:var(--rbw-white); display:flex; flex-direction:column; justify-content:center; align-items:center; }
+    .reveal .slides section.title-slide h1 { color:var(--rbw-white); font-size:2.2em; margin-bottom:0.1em; line-height:1.15; }
+    .reveal .slides section.title-slide h2 { color:var(--rbw-red); font-size:1.2em; font-weight:400; }
+    .reveal .slides section.title-slide p { color:rgba(255,255,255,0.6); font-size:0.7em; margin-top:1.5em; }
 
-    /* ── Section divider slides ── */
-    .reveal .slides section.section-divider {
-      text-align: center;
-      background: var(--rbw-red);
-      color: var(--rbw-white);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .reveal .slides section.section-divider h2 {
-      color: var(--rbw-white);
-      font-size: 2.6em;
-      margin-bottom: 0.2em;
-      border: none;
-    }
-    .reveal .slides section.section-divider h3 {
-      color: rgba(255,255,255,0.85);
-      font-size: 1.2em;
-      font-weight: 400;
-    }
+    /* Section divider */
+    .reveal .slides section.section-divider { text-align:center; background:var(--rbw-red); color:var(--rbw-white); display:flex; flex-direction:column; justify-content:center; align-items:center; }
+    .reveal .slides section.section-divider h2 { color:var(--rbw-white); font-size:2.4em; margin-bottom:0.2em; border:none; }
+    .reveal .slides section.section-divider h3 { color:rgba(255,255,255,0.85); font-size:1.1em; font-weight:400; }
 
-    /* ── Default headings ── */
-    .reveal h2 {
-      color: var(--rbw-navy);
-      font-size: 1.5em;
-      border-bottom: 3px solid var(--rbw-red);
-      padding-bottom: 0.25em;
-      margin-bottom: 0.7em;
-      margin-top: 0;
-    }
+    /* Headings */
+    .reveal h2 { color:var(--rbw-navy); font-size:1.4em; border-bottom:3px solid var(--rbw-red); padding-bottom:0.2em; margin-bottom:0.6em; margin-top:0; }
 
-    /* ── Bullet lists ── */
-    .reveal ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-    .reveal ul li {
-      position: relative;
-      padding-left: 1.3em;
-      margin-bottom: 0.45em;
-      font-size: 0.82em;
-      line-height: 1.45;
-      color: var(--rbw-gray);
-    }
-    .reveal ul li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.5em;
-      width: 8px;
-      height: 8px;
-      background: var(--rbw-red);
-      border-radius: 50%;
-    }
-    .reveal ul ul {
-      margin-top: 0.3em;
-    }
-    .reveal ul ul li {
-      font-size: 0.95em;
-      margin-bottom: 0.25em;
-    }
-    .reveal ul ul li::before {
-      width: 6px;
-      height: 6px;
-      background: var(--rbw-navy);
-      border-radius: 0;
-    }
+    /* Bullets */
+    .reveal ul { list-style:none; padding-left:0; margin:0; }
+    .reveal ul li { position:relative; padding-left:1.2em; margin-bottom:0.4em; font-size:0.78em; line-height:1.4; color:var(--rbw-gray); }
+    .reveal ul li::before { content:''; position:absolute; left:0; top:0.45em; width:7px; height:7px; background:var(--rbw-red); border-radius:50%; }
+    .reveal ul ul { margin-top:0.25em; }
+    .reveal ul ul li { font-size:0.93em; margin-bottom:0.2em; }
+    .reveal ul ul li::before { width:5px; height:5px; background:var(--rbw-navy); border-radius:0; }
 
-    /* ── Two-column layout ── */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
-    .two-col .col h3 {
-      font-size: 0.85em;
-      color: var(--rbw-navy);
-      margin-bottom: 0.4em;
-      margin-top: 0;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .two-col .col.bad {
-      background: rgba(200, 16, 46, 0.05);
-      padding: 18px;
-      border-radius: 8px;
-      border-left: 4px solid var(--rbw-red);
-    }
-    .two-col .col.good {
-      background: rgba(27, 48, 87, 0.05);
-      padding: 18px;
-      border-radius: 8px;
-      border-left: 4px solid var(--rbw-navy);
-    }
+    /* Data tables */
+    .data-table { width:100%; border-collapse:collapse; font-size:0.7em; margin:0.4em 0; }
+    .data-table th { background:var(--rbw-navy); color:#fff; padding:6px 10px; text-align:left; font-size:0.85em; text-transform:uppercase; letter-spacing:0.04em; }
+    .data-table td { padding:5px 10px; border-bottom:1px solid #e0e0e0; color:var(--rbw-gray); }
+    .data-table tr:nth-child(even) { background:rgba(27,48,87,0.03); }
+    .data-table .num { text-align:right; font-weight:700; font-variant-numeric:tabular-nums; }
+    .data-table .up { color:#43a047; }
+    .data-table .down { color:var(--rbw-red); }
+    .data-table .neutral { color:var(--rbw-gray); }
 
-    /* ── Funnel stages ── */
-    .funnel-stage {
-      background: var(--rbw-light-gray);
-      border-left: 5px solid var(--rbw-red);
-      padding: 10px 18px;
-      margin-bottom: 10px;
-      border-radius: 0 6px 6px 0;
-    }
-    .funnel-stage h4 {
-      color: var(--rbw-navy);
-      margin: 0 0 3px 0;
-      font-size: 0.85em;
-    }
-    .funnel-stage p {
-      color: var(--rbw-gray);
-      margin: 0;
-      font-size: 0.72em;
-    }
+    /* Stat cards */
+    .stat-row { display:flex; gap:16px; margin:0.5em 0; }
+    .stat-card { flex:1; background:var(--rbw-light-gray); border-top:4px solid var(--rbw-red); border-radius:0 0 8px 8px; padding:14px 16px; text-align:center; }
+    .stat-card.navy { border-top-color:var(--rbw-navy); }
+    .stat-card.gray { border-top-color:var(--rbw-gray); }
+    .stat-card .stat-num { font-size:1.6em; font-weight:800; color:var(--rbw-navy); line-height:1.1; }
+    .stat-card .stat-label { font-size:0.65em; color:var(--rbw-gray); margin-top:4px; line-height:1.3; }
 
-    /* ── Three-layer cards ── */
-    .layers {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 16px;
-    }
-    .layer-card {
-      padding: 16px;
-      border-radius: 8px;
-      font-size: 0.7em;
-    }
-    .layer-card h3 {
-      font-size: 1.05em;
-      margin-top: 0;
-      margin-bottom: 0.3em;
-    }
-    .layer-card p {
-      margin-top: 0;
-      margin-bottom: 0.4em;
-    }
-    .layer-card.capture {
-      background: rgba(27, 48, 87, 0.08);
-      border-top: 4px solid var(--rbw-navy);
-    }
-    .layer-card.capture h3 { color: var(--rbw-navy); }
-    .layer-card.create {
-      background: rgba(200, 16, 46, 0.06);
-      border-top: 4px solid var(--rbw-red);
-    }
-    .layer-card.create h3 { color: var(--rbw-red); }
-    .layer-card.convert {
-      background: rgba(88, 89, 91, 0.08);
-      border-top: 4px solid var(--rbw-gray);
-    }
-    .layer-card.convert h3 { color: var(--rbw-gray); }
+    /* Callout box */
+    .callout { background:rgba(27,48,87,0.06); border-left:4px solid var(--rbw-navy); padding:10px 14px; border-radius:0 6px 6px 0; margin:0.5em 0; font-size:0.72em; color:var(--rbw-gray); line-height:1.5; }
+    .callout strong { color:var(--rbw-navy); }
+    .callout.red { border-left-color:var(--rbw-red); background:rgba(200,16,46,0.04); }
+    .callout.red strong { color:var(--rbw-red); }
 
-    /* ── Statement slide ── */
-    .reveal .slides section.statement {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .reveal .slides section.statement h2 {
-      border: none;
-      font-size: 2em;
-      color: var(--rbw-navy);
-    }
-    .reveal .slides section.statement p {
-      font-size: 1.05em;
-      color: var(--rbw-gray);
-      max-width: 700px;
-      margin: 0 auto;
-    }
+    /* Two-column */
+    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+    .two-col .col h3 { font-size:0.82em; color:var(--rbw-navy); margin-bottom:0.35em; margin-top:0; text-transform:uppercase; letter-spacing:0.04em; }
+    .two-col .col.bad { background:rgba(200,16,46,0.04); padding:16px; border-radius:8px; border-left:4px solid var(--rbw-red); }
+    .two-col .col.good { background:rgba(27,48,87,0.04); padding:16px; border-radius:8px; border-left:4px solid var(--rbw-navy); }
 
-    /* ── Funnel mapped channels ── */
-    .funnel-mapped {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    .funnel-mapped .fm-stage {
-      padding: 12px 16px;
-      border-radius: 6px;
-      font-size: 0.7em;
-    }
-    .funnel-mapped .fm-stage h4 {
-      margin: 0 0 5px 0;
-      font-size: 1em;
-    }
-    .funnel-mapped .fm-stage ul {
-      margin: 0;
-    }
-    .funnel-mapped .fm-stage li {
-      margin-bottom: 0.15em;
-      font-size: 0.95em;
-    }
-    .fm-awareness { background: rgba(200, 16, 46, 0.06); border-left: 4px solid var(--rbw-red); }
-    .fm-awareness h4 { color: var(--rbw-red); }
-    .fm-consideration { background: rgba(200, 16, 46, 0.04); border-left: 4px solid #E8758A; }
-    .fm-consideration h4 { color: #B5283A; }
-    .fm-decision { background: rgba(27, 48, 87, 0.06); border-left: 4px solid var(--rbw-navy); }
-    .fm-decision h4 { color: var(--rbw-navy); }
-    .fm-conversion { background: rgba(88, 89, 91, 0.06); border-left: 4px solid var(--rbw-gray); }
-    .fm-conversion h4 { color: var(--rbw-gray); }
+    /* Three-layer cards */
+    .layers { display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; }
+    .layer-card { padding:14px; border-radius:8px; font-size:0.68em; }
+    .layer-card h3 { font-size:1em; margin:0 0 0.25em; }
+    .layer-card p { margin:0 0 0.3em; }
+    .layer-card.capture { background:rgba(27,48,87,0.07); border-top:4px solid var(--rbw-navy); }
+    .layer-card.capture h3 { color:var(--rbw-navy); }
+    .layer-card.create { background:rgba(200,16,46,0.05); border-top:4px solid var(--rbw-red); }
+    .layer-card.create h3 { color:var(--rbw-red); }
+    .layer-card.convert { background:rgba(88,89,91,0.07); border-top:4px solid var(--rbw-gray); }
+    .layer-card.convert h3 { color:var(--rbw-gray); }
 
-    /* ── Highlight / emphasis ── */
-    .highlight {
-      color: var(--rbw-red);
-      font-weight: 700;
-    }
+    /* Funnel stages */
+    .funnel-stage { background:var(--rbw-light-gray); border-left:5px solid var(--rbw-red); padding:9px 16px; margin-bottom:8px; border-radius:0 6px 6px 0; }
+    .funnel-stage h4 { color:var(--rbw-navy); margin:0 0 2px; font-size:0.82em; }
+    .funnel-stage p { color:var(--rbw-gray); margin:0; font-size:0.68em; }
 
-    /* ── Activity slides ── */
-    .reveal .slides section.activity {
-      border: 3px solid var(--rbw-red);
-      border-radius: 12px;
-    }
-    .reveal .slides section.activity h2 {
-      color: var(--rbw-red);
-    }
+    /* Funnel mapped */
+    .funnel-mapped { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .funnel-mapped .fm-stage { padding:10px 14px; border-radius:6px; font-size:0.67em; }
+    .funnel-mapped .fm-stage h4 { margin:0 0 4px; font-size:0.95em; }
+    .funnel-mapped .fm-stage ul { margin:0; }
+    .funnel-mapped .fm-stage li { margin-bottom:0.12em; font-size:0.93em; }
+    .fm-awareness { background:rgba(200,16,46,0.05); border-left:4px solid var(--rbw-red); }
+    .fm-awareness h4 { color:var(--rbw-red); }
+    .fm-consideration { background:rgba(200,16,46,0.03); border-left:4px solid #E8758A; }
+    .fm-consideration h4 { color:#B5283A; }
+    .fm-decision { background:rgba(27,48,87,0.05); border-left:4px solid var(--rbw-navy); }
+    .fm-decision h4 { color:var(--rbw-navy); }
+    .fm-conversion { background:rgba(88,89,91,0.05); border-left:4px solid var(--rbw-gray); }
+    .fm-conversion h4 { color:var(--rbw-gray); }
 
-    /* ── Slide number ── */
-    .reveal .slide-number {
-      color: var(--rbw-gray);
-      font-size: 12px;
-      right: 16px;
-      bottom: 16px;
-    }
+    /* Statement */
+    .reveal .slides section.statement { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
+    .reveal .slides section.statement h2 { border:none; font-size:1.9em; color:var(--rbw-navy); }
+    .reveal .slides section.statement p { font-size:1em; color:var(--rbw-gray); max-width:700px; margin:0 auto; }
 
-    /* ── Hide speaker notes indicator ── */
-    .reveal .speaker-notes-indicator {
-      display: none;
-    }
+    /* Activity */
+    .reveal .slides section.activity { border:3px solid var(--rbw-red); border-radius:12px; }
+    .reveal .slides section.activity h2 { color:var(--rbw-red); }
+
+    .highlight { color:var(--rbw-red); font-weight:700; }
+    .reveal .slide-number { color:var(--rbw-gray); font-size:12px; right:16px; bottom:16px; }
+    .reveal .speaker-notes-indicator { display:none; }
+
+    /* Source line */
+    .source { font-size:0.55em; color:#999; margin-top:0.5em; font-style:italic; }
   </style>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
-      <!-- SLIDE 1: Title -->
+      <!-- 1: TITLE -->
       <section class="title-slide">
         <h1>The 2026 Restoration<br>Marketing Reality</h1>
         <h2>Winning with the Right Media Mix</h2>
@@ -344,114 +145,29 @@
         </div>
       </section>
 
-      <!-- SLIDE 2: What Changed -->
-      <section>
-        <h2>What Changed in the Last 18 Months</h2>
-        <ul>
-          <li>Ad costs are up 20-35% across Google platforms</li>
-          <li>Google's search results page looks nothing like it did in 2024</li>
-          <li>More competitors are spending more money</li>
-          <li>AI is changing how people search and how Google serves results</li>
-          <li>The channels you relied on are getting crowded</li>
-        </ul>
-        <div class="logo-bar">
-          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
-          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
-        </div>
-      </section>
-
-      <!-- SLIDE 3: Current Landscape -->
-      <section>
-        <h2>The Current Landscape</h2>
-        <div class="two-col">
-          <div class="col bad">
-            <h3>What's Happening</h3>
-            <ul>
-              <li>LSAs now dominate the top of search results</li>
-              <li>PPC costs have increased significantly in restoration</li>
-              <li>SEO still works but takes longer and faces more competition</li>
-              <li>Aggregators (Angi, Thumbtack) are bidding on your keywords</li>
-              <li>Google Business Profile is more important than ever</li>
-            </ul>
-          </div>
-          <div class="col good">
-            <h3>What This Means for You</h3>
-            <ul>
-              <li>No single channel is as reliable as it used to be</li>
-              <li>The cost of doing nothing goes up every quarter</li>
-              <li>Operators who diversify are winning</li>
-            </ul>
-          </div>
-        </div>
-        <div class="logo-bar">
-          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
-          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
-        </div>
-      </section>
-
-      <!-- SLIDE 4: Biggest Shift -->
-      <section class="statement">
-        <h2>Stop thinking about channels.<br>Start thinking about systems.</h2>
-        <p>A channel is a tactic. A system is a strategy.<br>Your marketing should work together, not in silos.</p>
-        <div class="logo-bar">
-          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
-          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
-        </div>
-      </section>
-
-      <!-- SLIDE 5: Channel vs System Thinking -->
-      <section>
-        <h2>Channel Thinking vs. System Thinking</h2>
-        <div class="two-col">
-          <div class="col bad">
-            <h3>Channel Thinking</h3>
-            <ul>
-              <li>"We need to be on LSA"</li>
-              <li>"Let's try running some Facebook ads"</li>
-              <li>"Our SEO guy handles that"</li>
-              <li>"We get leads, so it must be working"</li>
-              <li>Each channel operates independently</li>
-            </ul>
-          </div>
-          <div class="col good">
-            <h3>System Thinking</h3>
-            <ul>
-              <li>"Where does LSA fit in our overall strategy?"</li>
-              <li>"What happens after someone sees our ad?"</li>
-              <li>"How do all our channels support each other?"</li>
-              <li>"We track from first touch to closed job"</li>
-              <li>Every channel has a role in the full journey</li>
-            </ul>
-          </div>
-        </div>
-        <div class="logo-bar">
-          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
-          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
-        </div>
-      </section>
-
-      <!-- SLIDE 6: What Is a Media Mix -->
+      <!-- 2: WHAT IS A MEDIA MIX -->
       <section>
         <h2>What Is a Media Mix?</h2>
         <ul>
-          <li>Your media mix is the combination of marketing channels you invest in</li>
+          <li>The combination of marketing channels you invest in and how they work together</li>
           <li>It defines where you show up, how you show up, and how often</li>
           <li>A strong media mix balances three things:
             <ul>
-              <li>Capturing demand that already exists</li>
-              <li>Creating demand before emergencies happen</li>
-              <li>Converting attention into booked jobs</li>
+              <li><strong>Capturing</strong> demand that already exists</li>
+              <li><strong>Creating</strong> demand before emergencies happen</li>
+              <li><strong>Converting</strong> attention into booked jobs</li>
             </ul>
           </li>
           <li>No two markets require the exact same mix</li>
         </ul>
+        <div class="callout"><strong>Key idea:</strong> Stop thinking about channels. Start thinking about systems. A channel is a tactic. A system is a strategy.</div>
         <div class="logo-bar">
           <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
           <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
         </div>
       </section>
 
-      <!-- SLIDE 7: Three Layers -->
+      <!-- 3: THREE LAYERS -->
       <section>
         <h2>The Three Layers of a Strong Media Mix</h2>
         <div class="layers">
@@ -460,28 +176,102 @@
             <p><em>Bottom of Funnel</em></p>
             <ul>
               <li>Local Service Ads</li>
-              <li>Google Ads (PPC) on high-intent keywords</li>
-              <li>SEO for "near me" and emergency searches</li>
-              <li>Google Business Profile optimization</li>
+              <li>Google Ads (PPC)</li>
+              <li>SEO for emergency searches</li>
+              <li>Google Business Profile</li>
             </ul>
           </div>
           <div class="layer-card create">
             <h3>2. Demand Creation</h3>
             <p><em>Middle / Top of Funnel</em></p>
             <ul>
-              <li>Retargeting ads (display and social)</li>
-              <li>YouTube pre-roll ads</li>
-              <li>Social media content and paid social</li>
-              <li>Community involvement and branding</li>
+              <li>Retargeting ads</li>
+              <li>YouTube pre-roll</li>
+              <li>Social media content</li>
+              <li>Community involvement</li>
             </ul>
           </div>
           <div class="layer-card convert">
             <h3>3. Trust &amp; Conversion</h3>
             <p><em>The Revenue Layer</em></p>
             <ul>
-              <li>Review generation and management</li>
-              <li>Website speed and user experience</li>
-              <li>Speed to lead (call answering, response time)</li>
+              <li>Reviews &amp; reputation</li>
+              <li>Website speed &amp; UX</li>
+              <li>Speed to lead</li>
+              <li>Follow-up &amp; CRM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout">Most restoration companies invest heavily in Layer 1 and almost nothing in Layers 2 and 3. The best operators cover all three.</div>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+      </section>
+
+      <!-- 4: THE MARKETING FUNNEL -->
+      <section>
+        <h2>The Marketing Funnel</h2>
+        <div class="funnel-stage">
+          <h4>1. Awareness</h4>
+          <p>People learn you exist. They see your brand before they need you.</p>
+        </div>
+        <div class="funnel-stage">
+          <h4>2. Consideration</h4>
+          <p>They have a problem and are comparing options. Reading reviews, checking websites.</p>
+        </div>
+        <div class="funnel-stage">
+          <h4>3. Decision</h4>
+          <p>They're ready to call someone. Searching "water damage restoration near me" right now.</p>
+        </div>
+        <div class="funnel-stage">
+          <h4>4. Conversion</h4>
+          <p>They clicked, called, or submitted a form. Now they need to become a booked, completed job.</p>
+        </div>
+        <div class="callout red"><strong>Restoration is different.</strong> When a pipe bursts at 2 AM, the decision stage lasts 5 minutes. Trust has to be built <em>before</em> the emergency. The company that shows up first usually wins.</div>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+      </section>
+
+      <!-- 5: WHERE CHANNELS MAP TO FUNNEL -->
+      <section>
+        <h2>Where Each Channel Fits in the Funnel</h2>
+        <div class="funnel-mapped">
+          <div class="fm-stage fm-awareness">
+            <h4>Awareness</h4>
+            <ul>
+              <li>Social media (organic and paid)</li>
+              <li>Community sponsorships and events</li>
+              <li>YouTube brand ads</li>
+              <li>Vehicle wraps and yard signs</li>
+            </ul>
+          </div>
+          <div class="fm-stage fm-consideration">
+            <h4>Consideration</h4>
+            <ul>
+              <li>Retargeting ads</li>
+              <li>Blog content and SEO</li>
+              <li>YouTube how-to content</li>
+              <li>Email nurture campaigns</li>
+            </ul>
+          </div>
+          <div class="fm-stage fm-decision">
+            <h4>Decision</h4>
+            <ul>
+              <li>Local Service Ads</li>
+              <li>Google Ads (PPC)</li>
+              <li>SEO (high-intent keywords)</li>
+              <li>Google Business Profile</li>
+            </ul>
+          </div>
+          <div class="fm-stage fm-conversion">
+            <h4>Conversion</h4>
+            <ul>
+              <li>Website experience (speed, mobile)</li>
+              <li>Online reviews and reputation</li>
+              <li>Call answering and speed to lead</li>
               <li>Follow-up systems and CRM</li>
             </ul>
           </div>
@@ -492,21 +282,208 @@
         </div>
       </section>
 
-      <!-- SLIDE 8: Conversion Layer -->
+      <!-- 6: DATA DIVIDER -->
+      <section class="section-divider">
+        <h2>THE DATA</h2>
+        <h3>What $10.79M in Restoration Ad Spend Tells Us</h3>
+        <div class="logo-bar">
+          <img class="logo-light" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-light" src="assets/sos-logo-white.png" alt="Spot On Solutions">
+        </div>
+      </section>
+
+      <!-- 7: INDUSTRY OVERVIEW -->
       <section>
-        <h2>The Conversion Layer: Where Revenue Is Won or Lost</h2>
-        <ul>
-          <li><span class="highlight">Leads do not equal revenue</span></li>
-          <li>What happens between the click and the booked job matters more than the click itself</li>
-          <li>The conversion layer includes:
+        <h2>The Industry Is Spending More -- A Lot More</h2>
+        <div class="stat-row">
+          <div class="stat-card">
+            <div class="stat-num">$10.79M</div>
+            <div class="stat-label">Total Ad Spend Analyzed</div>
+          </div>
+          <div class="stat-card navy">
+            <div class="stat-num">+44.7%</div>
+            <div class="stat-label">Combined Google Spend YoY</div>
+          </div>
+          <div class="stat-card gray">
+            <div class="stat-num">72</div>
+            <div class="stat-label">Cleaning &amp; Restoration Businesses</div>
+          </div>
+        </div>
+        <table class="data-table">
+          <tr><th>Metric</th><th>2024</th><th>2025</th><th>Change</th></tr>
+          <tr><td>Google Ads Spend</td><td class="num">$2.08M</td><td class="num">$2.66M</td><td class="num up">+27.8%</td></tr>
+          <tr><td>Google Ads Conversions</td><td class="num">30,630</td><td class="num">42,440</td><td class="num up">+38.6%</td></tr>
+          <tr><td>LSA Spend</td><td class="num">$1.83M</td><td class="num">$3.01M</td><td class="num up">+63.9%</td></tr>
+          <tr><td>LSA Total Leads</td><td class="num">12,816</td><td class="num">20,213</td><td class="num up">+57.7%</td></tr>
+        </table>
+        <div class="callout"><strong>What this means:</strong> Conversions grew faster than spend (+38.6% vs +27.8%), meaning the cost per lead actually <em>decreased</em>. If your CPLs went up while the industry's went down, your campaigns may be underperforming.</div>
+        <p class="source">Source: SOS x C&amp;R Magazine Cleaning &amp; Restoration Digital Advertising Report 2026</p>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+      </section>
+
+      <!-- 8: GOOGLE SEARCH BENCHMARKS -->
+      <section>
+        <h2>Google Search: The Numbers You Need to Know</h2>
+        <div class="two-col">
+          <div>
+            <h3 style="font-size:0.82em;color:var(--rbw-navy);margin:0 0 0.4em;text-transform:uppercase;">Year-Over-Year Trends</h3>
+            <table class="data-table">
+              <tr><th>Metric</th><th>2024</th><th>2025</th><th>YoY</th></tr>
+              <tr><td>Avg CPC</td><td class="num">$5.43</td><td class="num">$4.86</td><td class="num down">-10.4%</td></tr>
+              <tr><td>Avg CPL</td><td class="num">$70.06</td><td class="num">$65.80</td><td class="num down">-6.1%</td></tr>
+              <tr><td>Conv Rate</td><td class="num">7.74%</td><td class="num">7.68%</td><td class="num neutral">-0.8%</td></tr>
+            </table>
+          </div>
+          <div>
+            <h3 style="font-size:0.82em;color:var(--rbw-navy);margin:0 0 0.4em;text-transform:uppercase;">Where Do You Fall?</h3>
+            <table class="data-table">
+              <tr><th>Metric</th><th>Median</th><th>Middle 50%</th></tr>
+              <tr><td>CPC</td><td class="num">$6.79</td><td class="num">$4.69 - $10.11</td></tr>
+              <tr><td>Cost Per Lead</td><td class="num">$193.86</td><td class="num">$80 - $397</td></tr>
+              <tr><td>Conv Rate</td><td class="num">3.90%</td><td class="num">1.67% - 9.12%</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="callout"><strong>Key takeaway:</strong> CPC actually <em>decreased</em> 10.4% in restoration while most industries saw 8-15% inflation. Businesses that invested in Quality Score and landing pages captured this advantage. If your CPC exceeds $10.11, there's likely optimization opportunity.</div>
+        <p class="source">Source: SOS x C&amp;R Magazine Report 2026 | 70 businesses, $5.23M total spend analyzed</p>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+      </section>
+
+      <!-- 9: LSA REALITY CHECK -->
+      <section>
+        <h2>LSA: Growing Fast, Getting Expensive</h2>
+        <div class="stat-row">
+          <div class="stat-card">
+            <div class="stat-num">+63.9%</div>
+            <div class="stat-label">LSA Spend Growth YoY</div>
+          </div>
+          <div class="stat-card navy">
+            <div class="stat-num">+20.9%</div>
+            <div class="stat-label">LSA CPC Increase<br>($6.45 &rarr; $7.80)</div>
+          </div>
+          <div class="stat-card gray">
+            <div class="stat-num">+9.2%</div>
+            <div class="stat-label">LSA CPL Increase<br>($77.20 &rarr; $84.27)</div>
+          </div>
+        </div>
+        <div class="two-col" style="margin-top:0.4em;">
+          <div>
+            <h3 style="font-size:0.78em;color:var(--rbw-navy);margin:0 0 0.3em;text-transform:uppercase;">Google Search vs. LSA (2025)</h3>
+            <table class="data-table">
+              <tr><th>Metric</th><th>Search</th><th>LSA</th></tr>
+              <tr><td>Avg CPC</td><td class="num">$4.86</td><td class="num">$7.80</td></tr>
+              <tr><td>Avg CPL</td><td class="num">$65.80</td><td class="num">$84.27</td></tr>
+              <tr><td>Conv Rate</td><td class="num">7.68%</td><td class="num">9.21%</td></tr>
+            </table>
+          </div>
+          <div>
+            <h3 style="font-size:0.78em;color:var(--rbw-navy);margin:0 0 0.3em;text-transform:uppercase;">LSA CPL by Spend Tier</h3>
+            <table class="data-table">
+              <tr><th>Annual Spend</th><th>Median CPL</th></tr>
+              <tr><td>Under $5K</td><td class="num">~$60</td></tr>
+              <tr><td>$5K - $20K</td><td class="num">~$75</td></tr>
+              <tr><td>$20K - $50K</td><td class="num">~$130</td></tr>
+              <tr><td>$50K - $100K</td><td class="num">~$180</td></tr>
+              <tr><td>$100K+</td><td class="num">~$350</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="callout red"><strong>Bottom line:</strong> LSA is the fastest-rising cost channel. Google Search delivers a 22% lower CPL. LSA still earns its premium through the Google Guaranteed badge and higher intent -- but it should <em>complement</em> search, not replace it.</div>
+        <p class="source">Source: SOS x C&amp;R Magazine Report 2026 | 79 businesses, $5.29M LSA spend, 53,265 leads</p>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+      </section>
+
+      <!-- 10: BRAND RECOGNITION DATA -->
+      <section>
+        <h2>The Brand Recognition Advantage</h2>
+        <div class="stat-row">
+          <div class="stat-card">
+            <div class="stat-num">28%</div>
+            <div class="stat-label">Branded Search<br>Conversion Rate</div>
+          </div>
+          <div class="stat-card navy">
+            <div class="stat-num">4.68%</div>
+            <div class="stat-label">"Water Damage Restoration"<br>Conversion Rate</div>
+          </div>
+          <div class="stat-card gray">
+            <div class="stat-num">6x</div>
+            <div class="stat-label">Higher Conversion When<br>They Search Your Name</div>
+          </div>
+        </div>
+        <ul style="margin-top:0.5em;">
+          <li>Branded keywords convert at 28% -- roughly <strong>4-6x higher</strong> than generic service terms</li>
+          <li>Every dollar invested in brand awareness directly reduces future acquisition costs</li>
+          <li>This is why the top of the funnel matters: when someone knows your name before the emergency, you win</li>
+          <li>Social media, community involvement, and truck wraps aren't just "nice to have" -- they're feeding the bottom of the funnel</li>
+        </ul>
+        <div class="callout"><strong>The data is clear:</strong> Brand search volume is one of the highest-leverage investments available, compounding over time as more consumers search by name rather than by category.</div>
+        <p class="source">Source: SOS x C&amp;R Magazine Report 2026 | Branded Search: $272K spend, 37,315 clicks</p>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+      </section>
+
+      <!-- 11: AI SLIDE -->
+      <section>
+        <h2>AI Is Changing the Game</h2>
+        <div class="two-col">
+          <div>
+            <h3 style="font-size:0.78em;color:var(--rbw-navy);margin:0 0 0.3em;text-transform:uppercase;">What's Happening</h3>
             <ul>
-              <li>How fast you answer the phone</li>
-              <li>What your website looks like on mobile</li>
-              <li>Whether your reviews build trust or raise questions</li>
-              <li>How quickly you follow up on form submissions</li>
+              <li>Google AI Overviews now appear on many service searches</li>
+              <li>Organic results are being pushed further down the page</li>
+              <li>AI-generated content is flooding competitor blogs</li>
+              <li>Consumers are starting to search differently -- conversational, longer queries</li>
+              <li>Voice search and AI assistants are growing in home emergencies</li>
             </ul>
-          </li>
-          <li><span class="highlight">Most companies lose 30-50% of their leads in this layer</span></li>
+          </div>
+          <div>
+            <h3 style="font-size:0.78em;color:var(--rbw-navy);margin:0 0 0.3em;text-transform:uppercase;">What This Means for You</h3>
+            <ul>
+              <li>SEO is still critical but the rules are shifting</li>
+              <li>Quality, original content matters more than ever</li>
+              <li>Google Business Profile and reviews carry more weight in AI results</li>
+              <li>Paid search (LSA + PPC) becomes even more important as organic real estate shrinks</li>
+              <li>The companies with strong brands will be the ones AI recommends</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout red"><strong>The takeaway:</strong> AI doesn't replace your marketing funnel -- it makes every stage more competitive. The operators who invest across the full funnel will adapt. The ones relying on a single channel will get squeezed.</div>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+      </section>
+
+      <!-- 12: ADMALL DATA PLACEHOLDER -->
+      <section>
+        <h2>Restoration Market Intelligence</h2>
+        <p style="font-size:0.82em;color:var(--rbw-gray);margin-bottom:0.5em;"><em>[AdMall data -- to be added]</em></p>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+      </section>
+
+      <!-- 13: TIE BACK TO FUNNEL -->
+      <section>
+        <h2>What This Data Means for Your Funnel</h2>
+        <ul>
+          <li><span class="highlight">Decision stage is getting more expensive.</span> LSA costs up 20.9%, more competitors every quarter. You can't just outspend your way to leads anymore.</li>
+          <li><span class="highlight">Awareness drives the cheapest conversions.</span> Branded searches convert at 28% vs 4.68% for generic terms. Every dollar in brand building pays off at the bottom of the funnel.</li>
+          <li><span class="highlight">The Conversion layer is where money is made or lost.</span> Operators with 50+ reviews and sub-5-minute response times consistently achieve the lowest CPLs.</li>
+          <li><span class="highlight">AI is compressing organic visibility.</span> Paid channels and strong GBP profiles are now table stakes, not optional.</li>
+          <li><span class="highlight">The operators who cover all four funnel stages are the ones growing.</span> Everyone else is fighting over the same shrinking space.</li>
         </ul>
         <div class="logo-bar">
           <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
@@ -514,7 +491,7 @@
         </div>
       </section>
 
-      <!-- SLIDE 9: Common Mistakes -->
+      <!-- 14: COMMON MISTAKES -->
       <section>
         <h2>The Most Common Mistakes We See</h2>
         <ul>
@@ -526,13 +503,14 @@
           <li>Spending money without knowing your cost per booked job</li>
           <li>Ignoring reviews or not actively generating them</li>
         </ul>
+        <div class="callout red"><strong>The gap between the best and worst is not about budget.</strong> The wide CPL distribution ($44 to $325 for LSA alone) reflects differences in optimization, relevance, and operational responsiveness -- not just spend.</div>
         <div class="logo-bar">
           <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
           <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
         </div>
       </section>
 
-      <!-- SLIDE 10: Best Operators -->
+      <!-- 15: BEST OPERATORS -->
       <section>
         <h2>What the Best Operators Do Differently</h2>
         <ul>
@@ -541,31 +519,16 @@
           <li>They treat their website and reviews as marketing assets, not afterthoughts</li>
           <li>They answer the phone fast and follow up faster</li>
           <li>They adjust their mix quarterly based on data, not gut feel</li>
-          <li>They think long-term (SEO, brand) while executing short-term (LSA, PPC)</li>
+          <li>They build brand recognition so people search their name, not just their service</li>
         </ul>
+        <div class="callout"><strong>Remember:</strong> Branded searches convert at 28%. Generic searches convert under 5%. The best operators are playing a long game -- and the data shows it pays off.</div>
         <div class="logo-bar">
           <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
           <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
         </div>
       </section>
 
-      <!-- SLIDE 11: Transition -->
-      <section>
-        <h2>Now It's Your Turn</h2>
-        <ul>
-          <li>You know what the landscape looks like</li>
-          <li>You know the three layers of a strong media mix</li>
-          <li>You know where most companies lose money</li>
-          <li><strong>Next: we're going to map YOUR marketing funnel</strong></li>
-          <li>You'll identify what you have, what's missing, and what to fix first</li>
-        </ul>
-        <div class="logo-bar">
-          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
-          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
-        </div>
-      </section>
-
-      <!-- SLIDE 12: Workshop Divider -->
+      <!-- 16: WORKSHOP DIVIDER -->
       <section class="section-divider">
         <h2>WORKSHOP</h2>
         <h3>Build Your Marketing Funnel</h3>
@@ -575,7 +538,7 @@
         </div>
       </section>
 
-      <!-- SLIDE 13: Workshop Goal -->
+      <!-- 17: WORKSHOP GOAL -->
       <section>
         <h2>Workshop Goal</h2>
         <ul>
@@ -595,121 +558,7 @@
         </div>
       </section>
 
-      <!-- SLIDE 14: The Marketing Funnel -->
-      <section>
-        <h2>The Marketing Funnel (Simplified)</h2>
-        <div class="funnel-stage">
-          <h4>1. Awareness</h4>
-          <p>People learn you exist. They see your brand before they need you.</p>
-        </div>
-        <div class="funnel-stage">
-          <h4>2. Consideration</h4>
-          <p>They have a problem and are comparing options. Reading reviews, checking websites, asking around.</p>
-        </div>
-        <div class="funnel-stage">
-          <h4>3. Decision</h4>
-          <p>They're ready to call someone. Searching "water damage restoration near me" right now.</p>
-        </div>
-        <div class="funnel-stage">
-          <h4>4. Conversion</h4>
-          <p>They clicked, called, or submitted a form. Now they need to become a booked, completed job.</p>
-        </div>
-        <div class="logo-bar">
-          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
-          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
-        </div>
-      </section>
-
-      <!-- SLIDE 15: Why This Matters for Restoration -->
-      <section>
-        <h2>Why This Matters for Restoration</h2>
-        <ul>
-          <li>Restoration is emergency-driven: the decision stage is <span class="highlight">compressed</span></li>
-          <li>When someone needs you, they need you <strong>NOW</strong></li>
-          <li>That means:
-            <ul>
-              <li>Trust must be built before the emergency</li>
-              <li>Speed is a competitive advantage at every stage</li>
-              <li>The company that shows up first (online and in person) usually wins</li>
-            </ul>
-          </li>
-          <li>Your funnel has to account for both planned and panic decisions</li>
-        </ul>
-        <div class="logo-bar">
-          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
-          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
-        </div>
-      </section>
-
-      <!-- SLIDE 16: Where Each Channel Fits -->
-      <section>
-        <h2>Where Each Channel Fits in the Funnel</h2>
-        <div class="funnel-mapped">
-          <div class="fm-stage fm-awareness">
-            <h4>Awareness</h4>
-            <ul>
-              <li>Social media (organic and paid)</li>
-              <li>Community sponsorships and events</li>
-              <li>YouTube brand ads</li>
-              <li>Vehicle wraps and yard signs</li>
-            </ul>
-          </div>
-          <div class="fm-stage fm-consideration">
-            <h4>Consideration</h4>
-            <ul>
-              <li>Retargeting ads</li>
-              <li>Blog content and educational resources</li>
-              <li>YouTube how-to and explainer content</li>
-              <li>Email nurture campaigns</li>
-            </ul>
-          </div>
-          <div class="fm-stage fm-decision">
-            <h4>Decision</h4>
-            <ul>
-              <li>Local Service Ads</li>
-              <li>Google Ads (PPC)</li>
-              <li>SEO (high-intent keywords)</li>
-              <li>Google Business Profile</li>
-            </ul>
-          </div>
-          <div class="fm-stage fm-conversion">
-            <h4>Conversion</h4>
-            <ul>
-              <li>Website experience (speed, mobile, clarity)</li>
-              <li>Online reviews and reputation</li>
-              <li>Call answering and speed to lead</li>
-              <li>Follow-up systems and CRM</li>
-            </ul>
-          </div>
-        </div>
-        <div class="logo-bar">
-          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
-          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
-        </div>
-      </section>
-
-      <!-- SLIDE 17: Funnel Doesn't End at Click -->
-      <section>
-        <h2>The Funnel Does Not End at the Click</h2>
-        <ul>
-          <li>Getting the lead is only half the job</li>
-          <li><span class="highlight">The conversion layer is where revenue lives</span></li>
-          <li>Three questions to ask yourself:
-            <ul>
-              <li>What percentage of our leads become booked jobs?</li>
-              <li>How fast do we answer calls and return missed ones?</li>
-              <li>Would I hire us based on our website and reviews?</li>
-            </ul>
-          </li>
-          <li>If you can't answer these, <strong>that's your first gap</strong></li>
-        </ul>
-        <div class="logo-bar">
-          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
-          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
-        </div>
-      </section>
-
-      <!-- SLIDE 18: Step 1 — Map What You're Doing -->
+      <!-- 18: STEP 1 -->
       <section class="activity">
         <h2>Step 1: Map What You're Doing</h2>
         <ul>
@@ -728,7 +577,7 @@
         </div>
       </section>
 
-      <!-- SLIDE 19: Step 2 — Find the Gaps -->
+      <!-- 19: STEP 2 -->
       <section class="activity">
         <h2>Step 2: Find the Gaps</h2>
         <ul>
@@ -760,7 +609,6 @@
       slideNumber: 'c/t',
       showNotes: false,
       plugins: [RevealNotes],
-      // Use 100% of available space
       width: '100%',
       height: '100%',
       margin: 0,
