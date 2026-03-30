@@ -15,26 +15,76 @@
       --rbw-white: #FFFFFF;
     }
 
+    /* Make reveal fill the full viewport */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
     .reveal {
       font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
       color: var(--rbw-navy);
     }
-
+    .reveal .slides {
+      text-align: left;
+    }
     .reveal .slides section {
       text-align: left;
-      padding: 40px 60px;
+      padding: 60px 70px 70px 70px;
+      box-sizing: border-box;
+      height: 100%;
     }
 
-    /* Title slide */
+    /* ── Logo bar (bottom of every slide) ── */
+    .logo-bar {
+      position: absolute;
+      bottom: 18px;
+      left: 40px;
+      right: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .logo-bar img {
+      height: 36px;
+      opacity: 0.85;
+    }
+    /* White logos for dark-background slides */
+    .title-slide .logo-bar img.logo-dark,
+    .section-divider .logo-bar img.logo-dark {
+      display: none;
+    }
+    .title-slide .logo-bar img.logo-light,
+    .section-divider .logo-bar img.logo-light {
+      display: inline;
+    }
+    /* Default: show dark logos, hide light */
+    .logo-bar img.logo-light {
+      display: none;
+    }
+    .logo-bar img.logo-dark {
+      display: inline;
+    }
+
+    /* ── Title slide ── */
     .reveal .slides section.title-slide {
       text-align: center;
       background: var(--rbw-navy);
       color: var(--rbw-white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .reveal .slides section.title-slide h1 {
       color: var(--rbw-white);
-      font-size: 2.2em;
+      font-size: 2.4em;
       margin-bottom: 0.1em;
+      line-height: 1.15;
     }
     .reveal .slides section.title-slide h2 {
       color: var(--rbw-red);
@@ -42,21 +92,26 @@
       font-weight: 400;
     }
     .reveal .slides section.title-slide p {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.8em;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75em;
       margin-top: 1.5em;
     }
 
-    /* Section divider slides */
+    /* ── Section divider slides ── */
     .reveal .slides section.section-divider {
       text-align: center;
       background: var(--rbw-red);
       color: var(--rbw-white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .reveal .slides section.section-divider h2 {
       color: var(--rbw-white);
-      font-size: 2.4em;
+      font-size: 2.6em;
       margin-bottom: 0.2em;
+      border: none;
     }
     .reveal .slides section.section-divider h3 {
       color: rgba(255,255,255,0.85);
@@ -64,15 +119,17 @@
       font-weight: 400;
     }
 
-    /* Default content slides */
+    /* ── Default headings ── */
     .reveal h2 {
       color: var(--rbw-navy);
-      font-size: 1.6em;
+      font-size: 1.5em;
       border-bottom: 3px solid var(--rbw-red);
-      padding-bottom: 0.3em;
-      margin-bottom: 0.8em;
+      padding-bottom: 0.25em;
+      margin-bottom: 0.7em;
+      margin-top: 0;
     }
 
+    /* ── Bullet lists ── */
     .reveal ul {
       list-style: none;
       padding-left: 0;
@@ -80,25 +137,28 @@
     }
     .reveal ul li {
       position: relative;
-      padding-left: 1.4em;
-      margin-bottom: 0.5em;
-      font-size: 0.85em;
-      line-height: 1.5;
+      padding-left: 1.3em;
+      margin-bottom: 0.45em;
+      font-size: 0.82em;
+      line-height: 1.45;
       color: var(--rbw-gray);
     }
     .reveal ul li::before {
       content: '';
       position: absolute;
       left: 0;
-      top: 0.55em;
+      top: 0.5em;
       width: 8px;
       height: 8px;
       background: var(--rbw-red);
       border-radius: 50%;
     }
+    .reveal ul ul {
+      margin-top: 0.3em;
+    }
     .reveal ul ul li {
       font-size: 0.95em;
-      margin-bottom: 0.3em;
+      margin-bottom: 0.25em;
     }
     .reveal ul ul li::before {
       width: 6px;
@@ -107,65 +167,71 @@
       border-radius: 0;
     }
 
-    /* Two-column layout */
+    /* ── Two-column layout ── */
     .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      gap: 30px;
     }
     .two-col .col h3 {
-      font-size: 0.95em;
+      font-size: 0.85em;
       color: var(--rbw-navy);
-      margin-bottom: 0.5em;
+      margin-bottom: 0.4em;
+      margin-top: 0;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
     .two-col .col.bad {
       background: rgba(200, 16, 46, 0.05);
-      padding: 20px;
+      padding: 18px;
       border-radius: 8px;
       border-left: 4px solid var(--rbw-red);
     }
     .two-col .col.good {
       background: rgba(27, 48, 87, 0.05);
-      padding: 20px;
+      padding: 18px;
       border-radius: 8px;
       border-left: 4px solid var(--rbw-navy);
     }
 
-    /* Funnel visual */
+    /* ── Funnel stages ── */
     .funnel-stage {
       background: var(--rbw-light-gray);
       border-left: 5px solid var(--rbw-red);
-      padding: 12px 20px;
-      margin-bottom: 12px;
+      padding: 10px 18px;
+      margin-bottom: 10px;
       border-radius: 0 6px 6px 0;
     }
     .funnel-stage h4 {
       color: var(--rbw-navy);
-      margin: 0 0 4px 0;
-      font-size: 0.9em;
+      margin: 0 0 3px 0;
+      font-size: 0.85em;
     }
     .funnel-stage p {
       color: var(--rbw-gray);
       margin: 0;
-      font-size: 0.75em;
+      font-size: 0.72em;
     }
 
-    /* Three-layer cards */
+    /* ── Three-layer cards ── */
     .layers {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 20px;
+      gap: 16px;
     }
     .layer-card {
-      padding: 20px;
+      padding: 16px;
       border-radius: 8px;
-      font-size: 0.75em;
+      font-size: 0.7em;
     }
     .layer-card h3 {
-      font-size: 1.1em;
-      margin-bottom: 0.5em;
+      font-size: 1.05em;
+      margin-top: 0;
+      margin-bottom: 0.3em;
+    }
+    .layer-card p {
+      margin-top: 0;
+      margin-bottom: 0.4em;
     }
     .layer-card.capture {
       background: rgba(27, 48, 87, 0.08);
@@ -183,13 +249,13 @@
     }
     .layer-card.convert h3 { color: var(--rbw-gray); }
 
-    /* Statement slide */
+    /* ── Statement slide ── */
     .reveal .slides section.statement {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 60px;
     }
     .reveal .slides section.statement h2 {
       border: none;
@@ -197,32 +263,32 @@
       color: var(--rbw-navy);
     }
     .reveal .slides section.statement p {
-      font-size: 1.1em;
+      font-size: 1.05em;
       color: var(--rbw-gray);
       max-width: 700px;
       margin: 0 auto;
     }
 
-    /* Funnel mapped channels */
+    /* ── Funnel mapped channels ── */
     .funnel-mapped {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 15px;
+      gap: 12px;
     }
     .funnel-mapped .fm-stage {
-      padding: 15px;
+      padding: 12px 16px;
       border-radius: 6px;
-      font-size: 0.72em;
+      font-size: 0.7em;
     }
     .funnel-mapped .fm-stage h4 {
-      margin: 0 0 6px 0;
-      font-size: 1.05em;
+      margin: 0 0 5px 0;
+      font-size: 1em;
     }
     .funnel-mapped .fm-stage ul {
       margin: 0;
     }
     .funnel-mapped .fm-stage li {
-      margin-bottom: 0.2em;
+      margin-bottom: 0.15em;
       font-size: 0.95em;
     }
     .fm-awareness { background: rgba(200, 16, 46, 0.06); border-left: 4px solid var(--rbw-red); }
@@ -234,13 +300,13 @@
     .fm-conversion { background: rgba(88, 89, 91, 0.06); border-left: 4px solid var(--rbw-gray); }
     .fm-conversion h4 { color: var(--rbw-gray); }
 
-    /* Highlight / emphasis */
+    /* ── Highlight / emphasis ── */
     .highlight {
       color: var(--rbw-red);
       font-weight: 700;
     }
 
-    /* Activity slide */
+    /* ── Activity slides ── */
     .reveal .slides section.activity {
       border: 3px solid var(--rbw-red);
       border-radius: 12px;
@@ -249,13 +315,15 @@
       color: var(--rbw-red);
     }
 
-    /* Slide number */
+    /* ── Slide number ── */
     .reveal .slide-number {
       color: var(--rbw-gray);
-      font-size: 14px;
+      font-size: 12px;
+      right: 16px;
+      bottom: 16px;
     }
 
-    /* Speaker notes indicator */
+    /* ── Hide speaker notes indicator ── */
     .reveal .speaker-notes-indicator {
       display: none;
     }
@@ -269,19 +337,27 @@
       <section class="title-slide">
         <h1>The 2026 Restoration<br>Marketing Reality</h1>
         <h2>Winning with the Right Media Mix</h2>
-        <p>Spot On Solutions &bull; Rainbow Restoration National Conference 2026</p>
+        <p>Rainbow Restoration National Conference 2026</p>
+        <div class="logo-bar">
+          <img class="logo-light" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-light" src="assets/sos-logo-white.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 2: What Changed -->
       <section>
         <h2>What Changed in the Last 18 Months</h2>
         <ul>
-          <li>Ad costs are up 20–35% across Google platforms</li>
+          <li>Ad costs are up 20-35% across Google platforms</li>
           <li>Google's search results page looks nothing like it did in 2024</li>
           <li>More competitors are spending more money</li>
           <li>AI is changing how people search and how Google serves results</li>
           <li>The channels you relied on are getting crowded</li>
         </ul>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 3: Current Landscape -->
@@ -307,12 +383,20 @@
             </ul>
           </div>
         </div>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 4: Biggest Shift -->
       <section class="statement">
         <h2>Stop thinking about channels.<br>Start thinking about systems.</h2>
         <p>A channel is a tactic. A system is a strategy.<br>Your marketing should work together, not in silos.</p>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 5: Channel vs System Thinking -->
@@ -340,6 +424,10 @@
             </ul>
           </div>
         </div>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 6: What Is a Media Mix -->
@@ -357,6 +445,10 @@
           </li>
           <li>No two markets require the exact same mix</li>
         </ul>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 7: Three Layers -->
@@ -394,6 +486,10 @@
             </ul>
           </div>
         </div>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 8: Conversion Layer -->
@@ -410,8 +506,12 @@
               <li>How quickly you follow up on form submissions</li>
             </ul>
           </li>
-          <li><span class="highlight">Most companies lose 30–50% of their leads in this layer</span></li>
+          <li><span class="highlight">Most companies lose 30-50% of their leads in this layer</span></li>
         </ul>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 9: Common Mistakes -->
@@ -419,13 +519,17 @@
         <h2>The Most Common Mistakes We See</h2>
         <ul>
           <li>Over-relying on LSA as the only lead source</li>
-          <li>No retargeting — letting website visitors leave and forget you</li>
+          <li>No retargeting -- letting website visitors leave and forget you</li>
           <li>A website that looks outdated or loads slowly on mobile</li>
-          <li>Not answering calls within 3 rings or returning missed calls within 15 minutes</li>
+          <li>Not answering calls within 3 rings or returning missed calls within 15 min</li>
           <li>No system for tracking which channels actually produce revenue</li>
           <li>Spending money without knowing your cost per booked job</li>
           <li>Ignoring reviews or not actively generating them</li>
         </ul>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 10: Best Operators -->
@@ -439,6 +543,10 @@
           <li>They adjust their mix quarterly based on data, not gut feel</li>
           <li>They think long-term (SEO, brand) while executing short-term (LSA, PPC)</li>
         </ul>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 11: Transition -->
@@ -451,12 +559,20 @@
           <li><strong>Next: we're going to map YOUR marketing funnel</strong></li>
           <li>You'll identify what you have, what's missing, and what to fix first</li>
         </ul>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 12: Workshop Divider -->
       <section class="section-divider">
         <h2>WORKSHOP</h2>
         <h3>Build Your Marketing Funnel</h3>
+        <div class="logo-bar">
+          <img class="logo-light" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-light" src="assets/sos-logo-white.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 13: Workshop Goal -->
@@ -469,10 +585,14 @@
             <ul>
               <li>See your full marketing funnel on paper</li>
               <li>Identify the gaps in your current approach</li>
-              <li>Walk away with 2–3 clear next actions</li>
+              <li>Walk away with 2-3 clear next actions</li>
             </ul>
           </li>
         </ul>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 14: The Marketing Funnel -->
@@ -494,6 +614,10 @@
           <h4>4. Conversion</h4>
           <p>They clicked, called, or submitted a form. Now they need to become a booked, completed job.</p>
         </div>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 15: Why This Matters for Restoration -->
@@ -511,6 +635,10 @@
           </li>
           <li>Your funnel has to account for both planned and panic decisions</li>
         </ul>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 16: Where Each Channel Fits -->
@@ -554,6 +682,10 @@
             </ul>
           </div>
         </div>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 17: Funnel Doesn't End at Click -->
@@ -571,6 +703,10 @@
           </li>
           <li>If you can't answer these, <strong>that's your first gap</strong></li>
         </ul>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 18: Step 1 — Map What You're Doing -->
@@ -586,6 +722,10 @@
           </li>
           <li>Don't overthink it. Just get it all on paper.</li>
         </ul>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
       <!-- SLIDE 19: Step 2 — Find the Gaps -->
@@ -596,13 +736,17 @@
           <li>Which stages have the most activity? Which have none?</li>
           <li>Common patterns we see:
             <ul>
-              <li>Heavy on Decision (LSA, PPC) — light on everything else</li>
+              <li>Heavy on Decision (LSA, PPC) -- light on everything else</li>
               <li>No Awareness activity at all</li>
               <li>Nothing in Conversion beyond "we answer the phone"</li>
             </ul>
           </li>
-          <li><span class="highlight">Circle the biggest gap — that's your #1 priority</span></li>
+          <li><span class="highlight">Circle the biggest gap -- that's your #1 priority</span></li>
         </ul>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
       </section>
 
     </div>
@@ -616,11 +760,15 @@
       slideNumber: 'c/t',
       showNotes: false,
       plugins: [RevealNotes],
-      width: 1280,
-      height: 720,
-      margin: 0.04,
+      // Use 100% of available space
+      width: '100%',
+      height: '100%',
+      margin: 0,
+      minScale: 0.2,
+      maxScale: 2.0,
       transition: 'slide',
-      transitionSpeed: 'default'
+      transitionSpeed: 'default',
+      center: false
     });
   </script>
 </body>
