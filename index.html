@@ -120,7 +120,7 @@
     .highlight { color:var(--rbw-red); font-weight:700; }
     .reveal .slide-number { display:none; }
     .reveal .speaker-notes-indicator { display:none; }
-    .reveal .controls { display:none !important; }
+    .reveal .controls { bottom:50px !important; right:10px !important; }
     .source { position:absolute; bottom:38px; left:0; right:0; text-align:center; font-size:0.48em; color:#aaa; font-style:italic; }
   </style>
 </head>
@@ -509,7 +509,7 @@
     Reveal.initialize({
       hash: true,
       slideNumber: false,
-      controls: false,
+      controls: true,
       showNotes: false,
       plugins: [RevealNotes],
       width: '100%',
