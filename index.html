@@ -41,6 +41,11 @@
     .reveal .slides section.section-divider h2 { color:var(--rbw-white); font-size:2.6em; margin-bottom:0.15em; border:none; }
     .reveal .slides section.section-divider h3 { color:rgba(255,255,255,0.85); font-size:1.1em; font-weight:400; }
 
+    /* Statement slide */
+    .reveal .slides section.statement { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
+    .reveal .slides section.statement h2 { border:none; font-size:1.8em; color:var(--rbw-navy); line-height:1.3; max-width:800px; }
+    .reveal .slides section.statement p { font-size:0.9em; color:var(--rbw-gray); max-width:650px; margin:0.5em auto 0; line-height:1.5; }
+
     /* Headings */
     .reveal h2 { color:var(--rbw-navy); font-size:1.35em; border-bottom:3px solid var(--rbw-red); padding-bottom:0.2em; margin-bottom:0.5em; margin-top:0; }
 
@@ -79,18 +84,6 @@
     .two-col { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
     .two-col h3 { font-size:0.75em; color:var(--rbw-navy); margin:0 0 0.3em; text-transform:uppercase; letter-spacing:0.04em; }
 
-    /* Three-layer cards */
-    .layers { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
-    .layer-card { padding:12px 14px; border-radius:8px; font-size:0.68em; }
-    .layer-card h3 { font-size:0.95em; margin:0 0 0.2em; }
-    .layer-card p { margin:0 0 0.25em; font-style:italic; font-size:0.9em; }
-    .layer-card.capture { background:rgba(27,48,87,0.07); border-top:4px solid var(--rbw-navy); }
-    .layer-card.capture h3 { color:var(--rbw-navy); }
-    .layer-card.create { background:rgba(200,16,46,0.05); border-top:4px solid var(--rbw-red); }
-    .layer-card.create h3 { color:var(--rbw-red); }
-    .layer-card.convert { background:rgba(88,89,91,0.07); border-top:4px solid var(--rbw-gray); }
-    .layer-card.convert h3 { color:var(--rbw-gray); }
-
     /* Funnel graphic */
     .funnel-wrapper { display:flex; gap:30px; align-items:stretch; flex:1; }
     .funnel-visual { flex:0 0 360px; display:flex; flex-direction:column; align-items:center; }
@@ -113,6 +106,13 @@
     .reveal .slides section.activity { border:3px solid var(--rbw-red); border-radius:12px; display:flex; flex-direction:column; justify-content:center; }
     .reveal .slides section.activity h2 { color:var(--rbw-red); }
 
+    /* Close slide */
+    .reveal .slides section.close-slide { text-align:center; background:var(--rbw-navy); color:var(--rbw-white); display:flex; flex-direction:column; justify-content:center; align-items:center; }
+    .reveal .slides section.close-slide h2 { color:var(--rbw-white); font-size:1.8em; border:none; margin-bottom:0.6em; }
+    .reveal .slides section.close-slide p { color:rgba(255,255,255,0.7); font-size:0.8em; margin:0.15em 0; }
+    .reveal .slides section.close-slide .close-contact { margin-top:1.2em; padding-top:1em; border-top:1px solid rgba(255,255,255,0.15); }
+    .reveal .slides section.close-slide .close-contact p { font-size:0.7em; color:rgba(255,255,255,0.5); }
+
     .highlight { color:var(--rbw-red); font-weight:700; }
     .reveal .slide-number { color:var(--rbw-gray); font-size:11px; right:14px; bottom:14px; }
     .reveal .speaker-notes-indicator { display:none; }
@@ -134,25 +134,35 @@
         </div>
       </section>
 
-      <!-- 2: WHAT IS A MEDIA MIX -->
-      <section>
-        <h2>What Is a Media Mix?</h2>
-        <ul>
-          <li>The combination of marketing channels you invest in — and how they work together</li>
-          <li>It's not just <em>what</em> you're doing, it's whether it all connects into a system</li>
-          <li>A strong media mix <strong>captures</strong> demand that already exists</li>
-          <li>It <strong>creates</strong> demand before the emergency happens</li>
-          <li>And it <strong>converts</strong> attention into booked jobs</li>
-          <li>No two markets require the same mix — but every market needs all three</li>
-        </ul>
-        <div class="callout">Most restoration companies are good at one of these. The ones that are growing are covering all three.</div>
+      <!-- 2: THE PROBLEM -->
+      <section class="statement">
+        <h2>The marketing playbook from two years ago doesn't work anymore.</h2>
+        <p>Ad costs are up. The search results page has changed. AI is reshaping how your customers find you. And every competitor in your market is waking up to digital.</p>
+        <p style="margin-top:0.8em;"><strong style="color:var(--rbw-red);">The question isn't whether you're doing marketing.<br>It's whether your marketing is working as a system.</strong></p>
         <div class="logo-bar">
           <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
           <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
         </div>
       </section>
 
-      <!-- 3: THE MARKETING FUNNEL -->
+      <!-- 3: WHAT IS A MEDIA MIX -->
+      <section>
+        <h2>Your Media Mix Is Your System</h2>
+        <ul>
+          <li>It's every marketing channel you invest in — and how they connect</li>
+          <li>Most operators have a list of channels. The best operators have a <strong>system.</strong></li>
+          <li>A strong system <strong>captures</strong> demand that already exists</li>
+          <li>It <strong>creates</strong> demand before the emergency happens</li>
+          <li>And it <strong>converts</strong> attention into booked jobs</li>
+        </ul>
+        <div class="callout">Most restoration companies are good at one of these. The ones growing are covering all three.</div>
+        <div class="logo-bar">
+          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+      </section>
+
+      <!-- 4: THE MARKETING FUNNEL -->
       <section style="display:flex;flex-direction:column;">
         <h2>The Marketing Funnel</h2>
         <div class="funnel-wrapper">
@@ -182,61 +192,34 @@
         </div>
       </section>
 
-      <!-- 4: HOW YOUR CUSTOMERS SEARCH -->
+      <!-- 5: THE DATA -->
       <section>
-        <h2>How Your Customers Are Finding You</h2>
+        <h2>What the Data Tells Us</h2>
         <div class="stat-row">
           <div class="stat-card">
-            <div class="stat-num">90%</div>
-            <div class="stat-label">of adults engage with AI<br>summaries when searching</div>
+            <div class="stat-num">+44.7%</div>
+            <div class="stat-label">Industry Google Spend<br>Growth YoY</div>
           </div>
           <div class="stat-card navy">
-            <div class="stat-num">41%</div>
-            <div class="stat-label">used ChatGPT or AI<br>after seeing an ad<br><strong style="color:var(--rbw-red);font-size:1.1em;">+116% vs avg</strong></div>
+            <div class="stat-num">+20.9%</div>
+            <div class="stat-label">LSA Cost Per Click<br>Increase YoY</div>
           </div>
           <div class="stat-card">
-            <div class="stat-num">29%</div>
-            <div class="stat-label">already have a company<br>name in mind when searching</div>
+            <div class="stat-num">28%</div>
+            <div class="stat-label">Branded Search<br>Conversion Rate</div>
+          </div>
+          <div class="stat-card navy">
+            <div class="stat-num">4.68%</div>
+            <div class="stat-label">"Water Damage Restoration"<br>Conversion Rate</div>
           </div>
         </div>
         <ul style="margin-top:0.4em;">
-          <li>67% of homeowners took action after seeing a TV ad in the past year</li>
-          <li>58% were influenced by a blog post in the last 30 days <strong>(+114% vs avg)</strong></li>
-          <li>Homeowners are 12% more likely to check a company's blog for expertise</li>
+          <li>The industry spent $10.79M on digital ads in our dataset — and it's accelerating</li>
+          <li>LSA is the fastest-rising cost channel. Google Search CPC actually <em>dropped</em> 10.4%</li>
+          <li>Branded searches convert at <strong>6x the rate</strong> of generic service terms</li>
+          <li>Every dollar in brand awareness directly reduces your future cost per lead</li>
         </ul>
-        <p class="source">Sources: AdMall/SalesFuel AudienceSCAN 2025; Centerfield Gen-AI Consumer Survey 2025</p>
-        <div class="logo-bar">
-          <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
-          <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
-        </div>
-      </section>
-
-      <!-- 5: THE INDUSTRY IS SPENDING MORE -->
-      <section>
-        <h2>The Restoration Ad Landscape</h2>
-        <div class="stat-row">
-          <div class="stat-card">
-            <div class="stat-num">$10.79M</div>
-            <div class="stat-label">Ad Spend Analyzed</div>
-          </div>
-          <div class="stat-card navy">
-            <div class="stat-num">+44.7%</div>
-            <div class="stat-label">Google Spend Growth YoY</div>
-          </div>
-          <div class="stat-card navy">
-            <div class="stat-num">55,352</div>
-            <div class="stat-label">Establishments Nationwide</div>
-          </div>
-        </div>
-        <table class="data-table">
-          <tr><th>Metric</th><th>2024</th><th>2025</th><th>Change</th></tr>
-          <tr><td>Google Ads Spend</td><td class="num">$2.08M</td><td class="num">$2.66M</td><td class="num up">+27.8%</td></tr>
-          <tr><td>LSA Spend</td><td class="num">$1.83M</td><td class="num">$3.01M</td><td class="num up">+63.9%</td></tr>
-          <tr><td>LSA CPC</td><td class="num">$6.45</td><td class="num">$7.80</td><td class="num up">+20.9%</td></tr>
-          <tr><td>Google Search CPC</td><td class="num">$5.43</td><td class="num">$4.86</td><td class="num down">-10.4%</td></tr>
-        </table>
-        <div class="callout"><strong>LSA costs are rising fast</strong> (+20.9% CPC). Google Search CPC actually dropped. More competitive — but smarter operators are getting more efficient.</div>
-        <p class="source">Source: SOS x C&amp;R Magazine Cleaning &amp; Restoration Digital Advertising Report 2026</p>
+        <p class="source">Sources: SOS x C&amp;R Magazine Digital Advertising Report 2026; Industry Research 2025</p>
         <div class="logo-bar">
           <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
           <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
@@ -289,12 +272,11 @@
       <section>
         <h2>What This Means for Your Funnel</h2>
         <ul>
-          <li><span class="highlight">Decision is getting expensive.</span> LSA costs up 20.9%. You can't outspend your way to leads.</li>
-          <li><span class="highlight">Awareness drives the cheapest conversions.</span> 29% already have a name in mind when they search.</li>
-          <li><span class="highlight">Reviews are non-negotiable.</span> 31.5% need 15+ recent reviews to be influenced. 35% respond positively when you reply to negatives.</li>
-          <li><span class="highlight">AI is the new front door.</span> 41% use AI to research you. Your content, reviews, and GBP feed what AI recommends.</li>
-          <li><span class="highlight">Operators who cover all four funnel stages are the ones growing.</span></li>
+          <li><span class="highlight">The bottom of the funnel is getting expensive.</span> LSA costs are up 20.9%. You can't just outspend your way to leads anymore.</li>
+          <li><span class="highlight">The top of the funnel is where the leverage is.</span> Branded searches convert at 6x the rate of generic terms. Every dollar in awareness pays off at the bottom.</li>
+          <li><span class="highlight">AI is the new front door.</span> 41% of your potential customers are using AI to research you. Your content, reviews, and GBP feed what AI recommends.</li>
         </ul>
+        <div class="callout">The operators who cover all four funnel stages are the ones growing. Everyone else is fighting over the same shrinking space at the bottom.</div>
         <div class="logo-bar">
           <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
           <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
@@ -353,18 +335,29 @@
         <h2>Step 2: Find the Gaps</h2>
         <ul>
           <li>Which funnel stages have the most activity? Which have none?</li>
-          <li>Common patterns:
-            <ul>
-              <li>Heavy on Decision (LSA, PPC) — light on everything else</li>
-              <li>No Awareness activity at all</li>
-              <li>Nothing in Conversion beyond "we answer the phone"</li>
-            </ul>
-          </li>
+          <li>Heavy on Decision (LSA, PPC) but light on everything else?</li>
+          <li>No Awareness activity at all?</li>
+          <li>Nothing in Conversion beyond "we answer the phone"?</li>
           <li><span class="highlight">Circle the biggest gap — that's your #1 priority</span></li>
         </ul>
         <div class="logo-bar">
           <img class="logo-dark" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
           <img class="logo-dark" src="assets/sos-logo.png" alt="Spot On Solutions">
+        </div>
+      </section>
+
+      <!-- 12: CLOSE -->
+      <section class="close-slide">
+        <h2>Build the System.<br>Cover the Funnel.<br>Win the Market.</h2>
+        <p>Authoritative content. Strong reviews. A brand worth citing.</p>
+        <p>Google and AI are two systems rewarding the same thing.</p>
+        <div class="close-contact">
+          <p>Spot On Solutions</p>
+          <p>spotonsolutions.com</p>
+        </div>
+        <div class="logo-bar">
+          <img class="logo-light" src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+          <img class="logo-light" src="assets/sos-logo-white.png" alt="Spot On Solutions">
         </div>
       </section>
 
