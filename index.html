@@ -20,9 +20,9 @@
     .reveal .slides section { text-align:left; padding:48px 80px 60px; box-sizing:border-box; height:100%; }
 
     /* Logo bar */
-    .logo-bar { position:absolute; bottom:12px; left:30px; right:30px; display:flex; justify-content:space-between; align-items:center; pointer-events:none; z-index:10; }
-    .logo-bar img { height:30px; opacity:0.8; }
-    .logo-bar img[alt="Rainbow Restoration"] { height:44px; }
+    .logo-bar { position:absolute; bottom:16px; left:40px; right:40px; display:flex; justify-content:space-between; align-items:center; pointer-events:none; z-index:10; }
+    .logo-bar img { height:40px; opacity:0.9; }
+    .logo-bar img[alt="Rainbow Restoration"] { height:55px; }
     .title-slide .logo-bar img.logo-dark,
     .section-divider .logo-bar img.logo-dark { display:none; }
     .title-slide .logo-bar img.logo-light,
@@ -33,13 +33,13 @@
     /* Title slide */
     .reveal .slides section.title-slide { text-align:center; background:var(--rbw-navy); color:var(--rbw-white); display:flex; flex-direction:column; justify-content:center; align-items:center; }
     .reveal .slides section.title-slide h1 { color:var(--rbw-white); font-size:2.4em; margin-bottom:0.15em; line-height:1.15; }
-    .reveal .slides section.title-slide h2 { color:var(--rbw-red); font-size:1.2em; font-weight:400; margin:0; }
-    .reveal .slides section.title-slide p { color:rgba(255,255,255,0.5); font-size:0.7em; margin-top:2em; }
+    .reveal .slides section.title-slide h2 { color:var(--rbw-red); font-size:1.2em; font-weight:700; margin:0; }
+    .reveal .slides section.title-slide p { color:rgba(255,255,255,0.65); font-size:0.7em; margin-top:2em; }
 
     /* Section divider */
     .reveal .slides section.section-divider { text-align:center; background:var(--rbw-red); color:var(--rbw-white); display:flex; flex-direction:column; justify-content:center; align-items:center; }
     .reveal .slides section.section-divider h2 { color:var(--rbw-white); font-size:2.6em; margin-bottom:0.15em; border:none; }
-    .reveal .slides section.section-divider h3 { color:rgba(255,255,255,0.85); font-size:1.1em; font-weight:400; }
+    .reveal .slides section.section-divider h3 { color:rgba(255,255,255,0.95); font-size:1.1em; font-weight:400; }
 
     /* Statement slide — split background */
     .reveal .slides section.statement { text-align:center; padding:0 !important; display:flex !important; flex-direction:column; }
@@ -47,7 +47,7 @@
     .reveal .slides section.statement .split-top h1 { color:var(--rbw-navy); font-size:2.2em; line-height:1.15; margin:0; border:none; }
     .reveal .slides section.statement .split-divider { height:4px; background:var(--rbw-red); margin:0 10%; border-radius:2px; flex-shrink:0; }
     .reveal .slides section.statement .split-bottom { flex:1; background:var(--rbw-navy); display:flex; align-items:flex-start; justify-content:center; padding:0.5em 80px 0; }
-    .reveal .slides section.statement .split-bottom h2 { border:none; color:rgba(255,255,255,0.5); font-size:1.3em; font-weight:400; margin:0; }
+    .reveal .slides section.statement .split-bottom h2 { border:none; color:rgba(255,255,255,0.85); font-size:1.3em; font-weight:400; margin:0; }
 
     /* Headings */
     .reveal h2 { color:var(--rbw-navy); font-size:1.35em; border-bottom:3px solid var(--rbw-red); padding-bottom:0.25em; margin-bottom:0.6em; margin-top:0; }
@@ -112,14 +112,15 @@
     /* Close slide */
     .reveal .slides section.close-slide { text-align:center; background:var(--rbw-navy); color:var(--rbw-white); display:flex; flex-direction:column; justify-content:center; align-items:center; }
     .reveal .slides section.close-slide h2 { color:var(--rbw-white); font-size:1.8em; border:none; margin-bottom:0.6em; }
-    .reveal .slides section.close-slide p { color:rgba(255,255,255,0.7); font-size:0.8em; margin:0.15em 0; }
+    .reveal .slides section.close-slide p { color:rgba(255,255,255,0.85); font-size:0.8em; margin:0.15em 0; }
     .reveal .slides section.close-slide .close-contact { margin-top:1.5em; padding-top:1.2em; border-top:2px solid rgba(255,255,255,0.25); }
     .reveal .slides section.close-slide .close-contact p { font-size:0.95em; color:rgba(255,255,255,0.85); font-weight:600; }
     .reveal .slides section.close-slide .close-contact p.sub { font-size:0.75em; color:rgba(255,255,255,0.55); font-weight:400; margin-top:0.3em; }
 
     .highlight { color:var(--rbw-red); font-weight:700; }
-    .reveal .slide-number { color:var(--rbw-gray); font-size:11px; right:14px; bottom:14px; }
+    .reveal .slide-number { display:none; }
     .reveal .speaker-notes-indicator { display:none; }
+    .reveal .controls { display:none !important; }
     .source { position:absolute; bottom:38px; left:0; right:0; text-align:center; font-size:0.48em; color:#aaa; font-style:italic; }
   </style>
 </head>
@@ -507,7 +508,8 @@
   <script>
     Reveal.initialize({
       hash: true,
-      slideNumber: 'c/t',
+      slideNumber: false,
+      controls: false,
       showNotes: false,
       plugins: [RevealNotes],
       width: '100%',
