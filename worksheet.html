@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Mix Workshop Worksheet — Rainbow Restoration Conference 2026</title>
+<style>
+  @page { size: letter; margin: 0.6in 0.7in; }
+  :root { --navy:#1B3057; --red:#C8102E; --gray:#58595B; --light:#F2F2F2; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; color:#333; font-size:11px; line-height:1.4; padding:0.6in 0.7in; max-width:8.5in; margin:0 auto; }
+
+  /* Header */
+  .header { display:flex; justify-content:space-between; align-items:center; border-bottom:3px solid var(--red); padding-bottom:12px; margin-bottom:16px; }
+  .header-left h1 { font-size:16px; color:var(--navy); letter-spacing:0.5px; }
+  .header-left h2 { font-size:11px; color:var(--gray); font-weight:400; margin-top:2px; }
+  .header-right { display:flex; gap:16px; align-items:center; }
+  .header-right img { height:36px; }
+  .header-right img.sos { height:24px; }
+
+  /* Section headers */
+  h3 { font-size:13px; color:var(--navy); border-bottom:2px solid var(--red); padding-bottom:4px; margin:18px 0 10px; }
+  h3.step { background:var(--navy); color:#fff; padding:6px 12px; border-radius:4px; border:none; font-size:12px; letter-spacing:0.5px; }
+  h3.step span { color:var(--red); background:#fff; padding:1px 6px; border-radius:3px; font-size:11px; margin-right:6px; }
+
+  /* Funnel */
+  .funnel-ref { background:var(--light); border-radius:8px; padding:14px; margin-bottom:16px; display:flex; gap:20px; align-items:center; }
+  .funnel-svg { flex:0 0 200px; }
+  .funnel-labels { flex:1; display:flex; flex-direction:column; gap:6px; }
+  .fl { display:flex; gap:8px; align-items:flex-start; }
+  .fl-dot { width:8px; height:8px; border-radius:50%; margin-top:3px; flex-shrink:0; }
+  .fl b { font-size:10.5px; }
+  .fl span { font-size:9.5px; color:var(--gray); }
+
+  /* Tables */
+  table { width:100%; border-collapse:collapse; margin:6px 0 12px; }
+  th { background:var(--navy); color:#fff; padding:5px 8px; text-align:left; font-size:9.5px; text-transform:uppercase; letter-spacing:0.5px; }
+  td { padding:6px 8px; border-bottom:1px solid #ddd; font-size:10px; vertical-align:top; }
+  tr:nth-child(even) { background:rgba(27,48,87,0.03); }
+  .check { font-size:9px; color:var(--gray); line-height:1.6; }
+
+  /* Scoring */
+  .score-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:6px 0 12px; }
+  .score-box { border:1.5px solid #ddd; border-radius:6px; padding:10px 12px; }
+  .score-box h4 { font-size:11px; margin-bottom:4px; }
+  .score-box h4.awareness { color:var(--red); }
+  .score-box h4.consideration { color:#9B1B30; }
+  .score-box h4.decision { color:var(--navy); }
+  .score-box h4.conversion { color:var(--gray); }
+  .score-circles { display:flex; gap:6px; margin:6px 0; }
+  .score-circles span { width:22px; height:22px; border:1.5px solid #ccc; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9px; color:var(--gray); }
+  .score-line { border-bottom:1px solid #ddd; margin-top:6px; padding-bottom:4px; font-size:9px; color:var(--gray); }
+
+  .gap-box { border:2px solid var(--red); border-radius:6px; padding:10px 14px; margin:10px 0 16px; }
+  .gap-box label { font-size:11px; font-weight:700; color:var(--red); }
+  .gap-box .line { border-bottom:1px solid #ddd; height:20px; margin-top:4px; }
+
+  /* Tactic cards */
+  .tactic { border:1.5px solid #ddd; border-radius:6px; padding:10px 14px; margin:6px 0; border-left:4px solid var(--navy); }
+  .tactic h4 { font-size:11px; color:var(--navy); margin-bottom:6px; }
+  .tactic .field { margin:4px 0; }
+  .tactic .field label { font-size:9.5px; font-weight:600; color:var(--gray); }
+  .tactic .field .line { border-bottom:1px solid #ddd; height:18px; }
+  .tactic .check-row { font-size:9px; color:var(--gray); margin:4px 0; }
+
+  /* Takeaways */
+  .takeaway { border-left:3px solid var(--red); padding:6px 12px; margin:6px 0; }
+  .takeaway .line { border-bottom:1px solid #ddd; height:22px; }
+
+  /* Footer */
+  .footer { margin-top:20px; padding-top:10px; border-top:1px solid #ddd; text-align:center; font-size:8px; color:#aaa; }
+
+  /* Page breaks */
+  .page-break { page-break-before:always; }
+
+  @media print {
+    body { padding:0; }
+    .page-break { page-break-before:always; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <h1>The 2026 Restoration Marketing Reality</h1>
+    <h2>Media Mix Workshop Worksheet</h2>
+  </div>
+  <div class="header-right">
+    <img src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+    <img class="sos" src="assets/sos-logo.png" alt="Spot On Solutions">
+  </div>
+</div>
+
+<!-- FUNNEL REFERENCE -->
+<div class="funnel-ref">
+  <div class="funnel-svg">
+    <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" width="200">
+      <polygon points="5,0 195,0 172,50 28,50" fill="#C8102E" opacity="0.92"/>
+      <text x="100" y="32" text-anchor="middle" fill="#fff" font-size="10" font-weight="700" font-family="Segoe UI,sans-serif" letter-spacing="1">AWARENESS</text>
+      <polygon points="28,53 172,53 152,103 48,103" fill="#9B1B30" opacity="0.88"/>
+      <text x="100" y="85" text-anchor="middle" fill="#fff" font-size="9.5" font-weight="700" font-family="Segoe UI,sans-serif" letter-spacing="0.8">CONSIDERATION</text>
+      <polygon points="48,106 152,106 135,156 65,156" fill="#1B3057" opacity="0.92"/>
+      <text x="100" y="138" text-anchor="middle" fill="#fff" font-size="10" font-weight="700" font-family="Segoe UI,sans-serif" letter-spacing="1">DECISION</text>
+      <polygon points="65,159 135,159 125,209 75,209" fill="#58595B" opacity="0.88"/>
+      <text x="100" y="191" text-anchor="middle" fill="#fff" font-size="8" font-weight="700" font-family="Segoe UI,sans-serif" letter-spacing="0.5">CONVERSION</text>
+    </svg>
+  </div>
+  <div class="funnel-labels">
+    <div class="fl"><div class="fl-dot" style="background:#C8102E;"></div><div><b style="color:#C8102E;">Awareness</b><br><span>Social media, sponsorships, YouTube, vehicle wraps</span></div></div>
+    <div class="fl"><div class="fl-dot" style="background:#9B1B30;"></div><div><b style="color:#9B1B30;">Consideration</b><br><span>Retargeting, blog content, SEO, email nurture</span></div></div>
+    <div class="fl"><div class="fl-dot" style="background:#1B3057;"></div><div><b style="color:#1B3057;">Decision</b><br><span>LSA, Google Ads, SEO (high-intent), GBP</span></div></div>
+    <div class="fl"><div class="fl-dot" style="background:#58595B;"></div><div><b style="color:#58595B;">Conversion</b><br><span>Website, reviews, speed to lead, follow-up</span></div></div>
+  </div>
+</div>
+
+<!-- STEP 1 -->
+<h3 class="step"><span>1</span> Map What You're Doing</h3>
+<p style="font-size:10px;color:var(--gray);margin-bottom:8px;">Write down every marketing activity you're currently doing. For each one — <b>WHY</b> are you doing it and <b>WHERE</b> does it fit?</p>
+
+<table>
+  <tr><th style="width:3%;">#</th><th style="width:30%;">Marketing Activity</th><th style="width:30%;">Why are you doing this?</th><th style="width:37%;">Funnel Stage</th></tr>
+  <tr><td>1</td><td style="height:28px;"></td><td></td><td class="check">☐ Awareness &nbsp; ☐ Consideration &nbsp; ☐ Decision &nbsp; ☐ Conversion</td></tr>
+  <tr><td>2</td><td style="height:28px;"></td><td></td><td class="check">☐ Awareness &nbsp; ☐ Consideration &nbsp; ☐ Decision &nbsp; ☐ Conversion</td></tr>
+  <tr><td>3</td><td style="height:28px;"></td><td></td><td class="check">☐ Awareness &nbsp; ☐ Consideration &nbsp; ☐ Decision &nbsp; ☐ Conversion</td></tr>
+  <tr><td>4</td><td style="height:28px;"></td><td></td><td class="check">☐ Awareness &nbsp; ☐ Consideration &nbsp; ☐ Decision &nbsp; ☐ Conversion</td></tr>
+  <tr><td>5</td><td style="height:28px;"></td><td></td><td class="check">☐ Awareness &nbsp; ☐ Consideration &nbsp; ☐ Decision &nbsp; ☐ Conversion</td></tr>
+  <tr><td>6</td><td style="height:28px;"></td><td></td><td class="check">☐ Awareness &nbsp; ☐ Consideration &nbsp; ☐ Decision &nbsp; ☐ Conversion</td></tr>
+  <tr><td>7</td><td style="height:28px;"></td><td></td><td class="check">☐ Awareness &nbsp; ☐ Consideration &nbsp; ☐ Decision &nbsp; ☐ Conversion</td></tr>
+  <tr><td>8</td><td style="height:28px;"></td><td></td><td class="check">☐ Awareness &nbsp; ☐ Consideration &nbsp; ☐ Decision &nbsp; ☐ Conversion</td></tr>
+</table>
+
+<!-- STEP 2 -->
+<h3 class="step"><span>2</span> Find the Gaps</h3>
+<p style="font-size:10px;color:var(--gray);margin-bottom:8px;">Rate how strong your presence is in each funnel stage (1 = nothing, 5 = very strong).</p>
+
+<div class="score-grid">
+  <div class="score-box">
+    <h4 class="awareness">Awareness</h4>
+    <div style="font-size:9px;color:var(--gray);"># of activities: _____</div>
+    <div class="score-circles"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+    <div class="score-line">Notes: </div>
+  </div>
+  <div class="score-box">
+    <h4 class="consideration">Consideration</h4>
+    <div style="font-size:9px;color:var(--gray);"># of activities: _____</div>
+    <div class="score-circles"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+    <div class="score-line">Notes: </div>
+  </div>
+  <div class="score-box">
+    <h4 class="decision">Decision</h4>
+    <div style="font-size:9px;color:var(--gray);"># of activities: _____</div>
+    <div class="score-circles"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+    <div class="score-line">Notes: </div>
+  </div>
+  <div class="score-box">
+    <h4 class="conversion">Conversion</h4>
+    <div style="font-size:9px;color:var(--gray);"># of activities: _____</div>
+    <div class="score-circles"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+    <div class="score-line">Notes: </div>
+  </div>
+</div>
+
+<div class="gap-box">
+  <label>My biggest gap is:</label>
+  <div class="line"></div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page-break"></div>
+
+<div class="header">
+  <div class="header-left">
+    <h1>The 2026 Restoration Marketing Reality</h1>
+    <h2>Media Mix Workshop Worksheet — continued</h2>
+  </div>
+  <div class="header-right">
+    <img src="assets/rainbow-logo.png" alt="Rainbow Restoration">
+    <img class="sos" src="assets/sos-logo.png" alt="Spot On Solutions">
+  </div>
+</div>
+
+<!-- STEP 3 -->
+<h3 class="step"><span>3</span> Pick Your Next Move</h3>
+<p style="font-size:10px;color:var(--gray);margin-bottom:10px;">Based on your gaps, choose <b>1-3 things</b> you want to add to your marketing. Don't worry about the "how" yet — that's what we're here for.</p>
+
+<div class="tactic">
+  <h4>New Tactic #1</h4>
+  <div class="field"><label>What is it?</label><div class="line"></div></div>
+  <div class="check-row">Funnel stage: &nbsp; ☐ Awareness &nbsp; ☐ Consideration &nbsp; ☐ Decision &nbsp; ☐ Conversion</div>
+  <div class="field"><label>Why this one?</label><div class="line"></div></div>
+</div>
+
+<div class="tactic">
+  <h4>New Tactic #2</h4>
+  <div class="field"><label>What is it?</label><div class="line"></div></div>
+  <div class="check-row">Funnel stage: &nbsp; ☐ Awareness &nbsp; ☐ Consideration &nbsp; ☐ Decision &nbsp; ☐ Conversion</div>
+  <div class="field"><label>Why this one?</label><div class="line"></div></div>
+</div>
+
+<div class="tactic">
+  <h4>New Tactic #3</h4>
+  <div class="field"><label>What is it?</label><div class="line"></div></div>
+  <div class="check-row">Funnel stage: &nbsp; ☐ Awareness &nbsp; ☐ Consideration &nbsp; ☐ Decision &nbsp; ☐ Conversion</div>
+  <div class="field"><label>Why this one?</label><div class="line"></div></div>
+</div>
+
+<!-- TAKEAWAYS -->
+<h3 style="margin-top:20px;">Key Takeaways</h3>
+<p style="font-size:10px;color:var(--gray);margin-bottom:8px;">Write down 1-2 things you're taking home from today:</p>
+
+<div class="takeaway">
+  <div style="font-size:10px;font-weight:600;color:var(--navy);">1.</div>
+  <div class="line"></div>
+  <div class="line" style="margin-top:4px;"></div>
+</div>
+
+<div class="takeaway">
+  <div style="font-size:10px;font-weight:600;color:var(--navy);">2.</div>
+  <div class="line"></div>
+  <div class="line" style="margin-top:4px;"></div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Spot On Solutions &bull; spotonsolutions.com</p>
+  <p style="margin-top:4px;">Data from: SOS x C&amp;R Magazine Digital Advertising Report 2026 &bull; AdMall/SalesFuel 2025 &bull; Superprompt 12M Visit Study 2025 &bull; BrightLocal LCRS 2026</p>
+</div>
+
+</body>
+</html>
