@@ -42,13 +42,12 @@
     .reveal .slides section.section-divider h3 { color:rgba(255,255,255,0.85); font-size:1.1em; font-weight:400; }
 
     /* Statement slide — split background */
-    .reveal .slides section.statement { text-align:center; display:flex; flex-direction:column; justify-content:stretch; align-items:center; background:none; padding:0 !important; overflow:hidden; }
-    .reveal .slides section.statement .top-half { flex:0 0 50%; width:100%; display:flex; align-items:flex-end; justify-content:center; background:#fff; padding:0 80px 0.4em; }
-    .reveal .slides section.statement h1 { color:var(--rbw-navy); font-size:2.4em; margin:0; line-height:1.15; max-width:90%; }
-    .reveal .slides section.statement .divider { width:100%; height:4px; background:var(--rbw-red); flex-shrink:0; z-index:2; }
-    .reveal .slides section.statement .bottom-half { flex:0 0 50%; width:100%; display:flex; align-items:flex-start; justify-content:center; background:var(--rbw-navy); padding:0.5em 80px 0; }
-    .reveal .slides section.statement h2 { border:none; color:rgba(255,255,255,0.5); font-size:1.3em; font-weight:400; margin:0; }
-    .reveal .slides section.statement p { font-size:0.8em; color:var(--rbw-gray); margin:0; }
+    .reveal .slides section.statement { text-align:center; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; padding:0 80px !important; background:#fff; }
+    .reveal .slides section.statement::after { content:''; position:absolute; bottom:0; left:0; right:0; height:50%; background:var(--rbw-navy); z-index:0; }
+    .reveal .slides section.statement .divider { width:100%; height:4px; background:var(--rbw-red); position:relative; z-index:1; margin:0.3em 0; }
+    .reveal .slides section.statement h1 { color:var(--rbw-navy); font-size:2.4em; margin:0 0 0.15em; line-height:1.15; position:relative; z-index:1; }
+    .reveal .slides section.statement h2 { border:none; color:rgba(255,255,255,0.5); font-size:1.3em; font-weight:400; margin:0.15em 0 0; position:relative; z-index:1; }
+    .reveal .slides section.statement .logo-bar { z-index:1; }
 
     /* Headings */
     .reveal h2 { color:var(--rbw-navy); font-size:1.35em; border-bottom:3px solid var(--rbw-red); padding-bottom:0.25em; margin-bottom:0.6em; margin-top:0; }
@@ -141,16 +140,12 @@
 
       <!-- 2: THE PROBLEM -->
       <section class="statement">
-        <div class="top-half">
-          <h1>How your customers find you has changed.</h1>
-        </div>
+        <h1>How your customers find you has changed.</h1>
         <div class="divider"></div>
-        <div class="bottom-half">
-          <h2>Has your marketing kept up?</h2>
-        </div>
+        <h2>Has your marketing kept up?</h2>
         <div class="logo-bar">
-          <img class="logo-light" src="assets/rainbow-logo.png" alt="Rainbow Restoration" style="display:inline;">
-          <img class="logo-light" src="assets/sos-logo-white.png" alt="Spot On Solutions" style="display:inline;">
+          <img src="assets/rainbow-logo.png" alt="Rainbow Restoration" style="display:inline;">
+          <img src="assets/sos-logo-white.png" alt="Spot On Solutions" style="display:inline;">
         </div>
       </section>
 
